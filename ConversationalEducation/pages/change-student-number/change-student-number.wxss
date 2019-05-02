@@ -1,0 +1,16 @@
+input {
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 32rpx;
+  margin: 20rpx;
+  border-bottom-width: 1rpx;
+  border-bottom-color: #009900;
+  border-bottom-style: solid;
+}
+
+button {
+  width: 200rpx;
+  border-radius: 80rpx;
+  margin: 40rpx auto 0rpx auto;
+  font-size: 35rpx;
+}

@@ -1,0 +1,28 @@
+page {
+  background-color: #eeeeee;
+}
+
+button::before {
+  border: none;
+}
+
+button {
+  display: flex;
+  flex-direction: row;
+  height: 150rpx;
+  line-height: 150rpx;
+  text-align: left;
+  font-size: 35rpx;
+  background-color: #ffffff;
+  margin: 20rpx;
+  border-radius: 10rpx;
+  border-color: #333333;
+}
+
+button image {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  top: 55rpx;
+  right: 20rpx;
+}

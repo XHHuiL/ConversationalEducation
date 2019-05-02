@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/home/home",
+    "pages/mine/mine",
+    "pages/note/note",
+    "pages/change-name/change-name",
+    "pages/change-email/change-email",
+    "pages/change-student-number/change-student-number",
+    "pages/change-note/change-note",
+    "pages/chapter/chapter",
+    "pages/content/content"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#2aa515",
+    "backgroundColor": "#fffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "assets/images/home_selected.png",
+        "iconPath": "assets/images/home.png",
+        "pagePath": "pages/home/home",
+        "text": "课程"
+      },
+      {
+        "selectedIconPath": "assets/images/note_selected.png",
+        "iconPath": "assets/images/note.png",
+        "pagePath": "pages/note/note",
+        "text": "笔记"
+      },
+      {
+        "selectedIconPath": "assets/images/mine_selected.png",
+        "iconPath": "assets/images/mine.png",
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,16 @@
+<view class="header">
+  <button class='bottom' lang='zh_CN' bindtap='allCourses'>所有课程</button>
+  <button class='bottom' lang='zh_CN' bindtap='selectedCourses'>已选课程</button>
+  <button class='bottom' lang='zh_CN' bindtap='unselectedCourses'>未选课程</button>
+</view>
+<view class="body">
+  <scroll-view scroll-y="true">
+    <navigator wx:for="{{courses}}" url='../../pages/chapter/chapter?course_id={{item.id}}'>
+      <button class='course'>
+        <image src="{{item.image}}"></image>
+        <text>{{item.name}}</text>
+        <text class='num'>学生数：{{item.student_num}}</text>
+      </button>
+    </navigator>
+  </scroll-view>
+</view>

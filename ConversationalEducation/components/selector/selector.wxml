@@ -1,0 +1,10 @@
+<view>
+  <button class='selector' type='primary' lang='zh_CN' bindtap='selectToggle'>
+    {{currentOption}}
+  </button>
+  <view wx:if="{{selectShow}}">
+    <view wx:for="{{options}}" data-index="{{index}}" wx:key='' bindtap='selectOption'>
+      {{item.text}}
+    </view>
+  </view>
+</view>

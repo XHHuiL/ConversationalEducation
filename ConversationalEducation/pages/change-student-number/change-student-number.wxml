@@ -1,0 +1,2 @@
+<input value="{{old_student_number}}" auto-focus bindinput='changeStudentNumber' />
+<button type='primary' lang='zh_CN' bindtap='saveStudentNumber'>保存</button>

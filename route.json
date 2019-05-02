@@ -1,0 +1,6 @@
+{
+    "/notes/:student_id": "/notes?student_id=:student_id",
+    "/courses/selected/:student_id": "/selected?student_id=:student_id",
+    "/courses/unselected/:student_id": "/unselected?student_id=:student_id",
+    "/chapter/:course_id": "/chapter?course_id=:course_id"
+}

@@ -1,0 +1,7 @@
+.selector {
+  width: 200rpx;
+  font-size: 32rpx;
+  line-height: 60rpx;
+  height: 60rpx;
+  border-radius: 20rpx;
+}

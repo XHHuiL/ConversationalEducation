@@ -1,0 +1,9 @@
+<scroll-view scroll-y="true">
+  <navigator wx:for="{{chapters}}" data-index="index"
+  url='../../pages/content/content?chapter_id={{item.id}}'>
+    <button>
+      <text>{{item.name}}</text>
+      <image src='/assets/images/enter.png'></image>
+    </button >
+  </navigator>
+</scroll-view>

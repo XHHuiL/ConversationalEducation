@@ -1,0 +1,645 @@
+{
+    "chapter": [
+        {
+            "course_id": 1,
+            "chapters":[
+                {
+                    "id": 1,
+                    "name": "软件质量保障与测试基础"
+                },
+                {
+                    "id": 2,
+                    "name": "需求工程简介"
+                },
+                {
+                    "id": 3,
+                    "name": "需求文档与建模技术"
+                },
+                {
+                    "id": 4,
+                    "name": "Devops简介"
+                },
+                {
+                    "id": 5,
+                    "name": "软甲测试基本过程"
+                },
+                {
+                    "id": 6,
+                    "name": "软件测试管理"
+                },
+                {
+                    "id": 7,
+                    "name": "黑盒测试用例设计技术"
+                },
+                {
+                    "id": 8,
+                    "name": "黑盒测试相关工具介绍与实践"
+                },
+                {
+                    "id": 9,
+                    "name": "白盒测试用例设计技术"
+                },
+                {
+                    "id": 10,
+                    "name": "性能测试工具与实践"
+                }
+            ]
+        },
+        {
+            "course_id": 2,
+            "chapters":[
+                {
+                    "id": 1,
+                    "name": "软件质量保障与测试基础"
+                },
+                {
+                    "id": 2,
+                    "name": "需求工程简介"
+                },
+                {
+                    "id": 3,
+                    "name": "需求文档与建模技术"
+                },
+                {
+                    "id": 4,
+                    "name": "Devops简介"
+                },
+                {
+                    "id": 5,
+                    "name": "软甲测试基本过程"
+                },
+                {
+                    "id": 6,
+                    "name": "软件测试管理"
+                },
+                {
+                    "id": 7,
+                    "name": "黑盒测试用例设计技术"
+                },
+                {
+                    "id": 8,
+                    "name": "黑盒测试相关工具介绍与实践"
+                },
+                {
+                    "id": 9,
+                    "name": "白盒测试用例设计技术"
+                },
+                {
+                    "id": 10,
+                    "name": "性能测试工具与实践"
+                }
+            ]
+        },
+        {
+            "course_id": 3,
+            "chapters":[
+                {
+                    "id": 1,
+                    "name": "软件质量保障与测试基础"
+                },
+                {
+                    "id": 2,
+                    "name": "需求工程简介"
+                },
+                {
+                    "id": 3,
+                    "name": "需求文档与建模技术"
+                },
+                {
+                    "id": 4,
+                    "name": "Devops简介"
+                },
+                {
+                    "id": 5,
+                    "name": "软甲测试基本过程"
+                },
+                {
+                    "id": 6,
+                    "name": "软件测试管理"
+                },
+                {
+                    "id": 7,
+                    "name": "黑盒测试用例设计技术"
+                },
+                {
+                    "id": 8,
+                    "name": "黑盒测试相关工具介绍与实践"
+                },
+                {
+                    "id": 9,
+                    "name": "白盒测试用例设计技术"
+                },
+                {
+                    "id": 10,
+                    "name": "性能测试工具与实践"
+                }
+            ]
+        },
+        {
+            "course_id": 3,
+            "chapters":[
+                {
+                    "id": 1,
+                    "name": "软件质量保障与测试基础"
+                },
+                {
+                    "id": 2,
+                    "name": "需求工程简介"
+                },
+                {
+                    "id": 3,
+                    "name": "需求文档与建模技术"
+                },
+                {
+                    "id": 4,
+                    "name": "Devops简介"
+                },
+                {
+                    "id": 5,
+                    "name": "软甲测试基本过程"
+                },
+                {
+                    "id": 6,
+                    "name": "软件测试管理"
+                },
+                {
+                    "id": 7,
+                    "name": "黑盒测试用例设计技术"
+                },
+                {
+                    "id": 8,
+                    "name": "黑盒测试相关工具介绍与实践"
+                },
+                {
+                    "id": 9,
+                    "name": "白盒测试用例设计技术"
+                },
+                {
+                    "id": 10,
+                    "name": "性能测试工具与实践"
+                }
+            ]
+        },
+        {
+            "course_id": 4,
+            "chapters":[
+                {
+                    "id": 1,
+                    "name": "软件质量保障与测试基础"
+                },
+                {
+                    "id": 2,
+                    "name": "需求工程简介"
+                },
+                {
+                    "id": 3,
+                    "name": "需求文档与建模技术"
+                },
+                {
+                    "id": 4,
+                    "name": "Devops简介"
+                },
+                {
+                    "id": 5,
+                    "name": "软甲测试基本过程"
+                },
+                {
+                    "id": 6,
+                    "name": "软件测试管理"
+                },
+                {
+                    "id": 7,
+                    "name": "黑盒测试用例设计技术"
+                },
+                {
+                    "id": 8,
+                    "name": "黑盒测试相关工具介绍与实践"
+                },
+                {
+                    "id": 9,
+                    "name": "白盒测试用例设计技术"
+                },
+                {
+                    "id": 10,
+                    "name": "性能测试工具与实践"
+                }
+            ]
+        },
+        {
+            "course_id": 5,
+            "chapters":[
+                {
+                    "id": 1,
+                    "name": "软件质量保障与测试基础"
+                },
+                {
+                    "id": 2,
+                    "name": "需求工程简介"
+                },
+                {
+                    "id": 3,
+                    "name": "需求文档与建模技术"
+                },
+                {
+                    "id": 4,
+                    "name": "Devops简介"
+                },
+                {
+                    "id": 5,
+                    "name": "软甲测试基本过程"
+                },
+                {
+                    "id": 6,
+                    "name": "软件测试管理"
+                },
+                {
+                    "id": 7,
+                    "name": "黑盒测试用例设计技术"
+                },
+                {
+                    "id": 8,
+                    "name": "黑盒测试相关工具介绍与实践"
+                },
+                {
+                    "id": 9,
+                    "name": "白盒测试用例设计技术"
+                },
+                {
+                    "id": 10,
+                    "name": "性能测试工具与实践"
+                }
+            ]
+        },
+        {
+            "course_id": 6,
+            "chapters":[
+                {
+                    "id": 1,
+                    "name": "软件质量保障与测试基础"
+                },
+                {
+                    "id": 2,
+                    "name": "需求工程简介"
+                },
+                {
+                    "id": 3,
+                    "name": "需求文档与建模技术"
+                },
+                {
+                    "id": 4,
+                    "name": "Devops简介"
+                },
+                {
+                    "id": 5,
+                    "name": "软甲测试基本过程"
+                },
+                {
+                    "id": 6,
+                    "name": "软件测试管理"
+                },
+                {
+                    "id": 7,
+                    "name": "黑盒测试用例设计技术"
+                },
+                {
+                    "id": 8,
+                    "name": "黑盒测试相关工具介绍与实践"
+                },
+                {
+                    "id": 9,
+                    "name": "白盒测试用例设计技术"
+                },
+                {
+                    "id": 10,
+                    "name": "性能测试工具与实践"
+                }
+            ]
+        },
+        {
+            "course_id": 7,
+            "chapters":[
+                {
+                    "id": 1,
+                    "name": "软件质量保障与测试基础"
+                },
+                {
+                    "id": 2,
+                    "name": "需求工程简介"
+                },
+                {
+                    "id": 3,
+                    "name": "需求文档与建模技术"
+                },
+                {
+                    "id": 4,
+                    "name": "Devops简介"
+                },
+                {
+                    "id": 5,
+                    "name": "软甲测试基本过程"
+                },
+                {
+                    "id": 6,
+                    "name": "软件测试管理"
+                },
+                {
+                    "id": 7,
+                    "name": "黑盒测试用例设计技术"
+                },
+                {
+                    "id": 8,
+                    "name": "黑盒测试相关工具介绍与实践"
+                },
+                {
+                    "id": 9,
+                    "name": "白盒测试用例设计技术"
+                },
+                {
+                    "id": 10,
+                    "name": "性能测试工具与实践"
+                }
+            ]
+        },
+        {
+            "course_id": 8,
+            "chapters":[
+                {
+                    "id": 1,
+                    "name": "软件质量保障与测试基础"
+                },
+                {
+                    "id": 2,
+                    "name": "需求工程简介"
+                },
+                {
+                    "id": 3,
+                    "name": "需求文档与建模技术"
+                },
+                {
+                    "id": 4,
+                    "name": "Devops简介"
+                },
+                {
+                    "id": 5,
+                    "name": "软甲测试基本过程"
+                },
+                {
+                    "id": 6,
+                    "name": "软件测试管理"
+                },
+                {
+                    "id": 7,
+                    "name": "黑盒测试用例设计技术"
+                },
+                {
+                    "id": 8,
+                    "name": "黑盒测试相关工具介绍与实践"
+                },
+                {
+                    "id": 9,
+                    "name": "白盒测试用例设计技术"
+                },
+                {
+                    "id": 10,
+                    "name": "性能测试工具与实践"
+                }
+            ]
+        }
+    ],
+    "unselected": [
+        {
+            "student_id": 1,
+            "courses": [
+                {
+                    "id": 5,
+                    "name": "系统程序设计",
+                    "teacher_id": 5,
+                    "image": "http://localhost:5300/assets/images/course/5.jpg",
+                    "student_num": 40
+                },
+                {
+                    "id": 6,
+                    "name": "计算机网络",
+                    "teacher_id": 6,
+                    "image": "http://localhost:5300/assets/images/course/6.jpg",
+                    "student_num": 50
+                },
+                {
+                    "id": 7,
+                    "name": "算法与数据结构",
+                    "teacher_id": 7,
+                    "image": "http://localhost:5300/assets/images/course/7.jpg",
+                    "student_num": 50
+                },
+                {
+                    "id": 8,
+                    "name": "面向对象程序设计",
+                    "teacher_id": 8,
+                    "image": "http://localhost:5300/assets/images/course/8.jpg",
+                    "student_num": 35
+                }
+            ]
+        }
+    ],
+    "selected": [
+        {
+            "student_id": 1,
+            "courses": [
+                {
+                    "id": 1,
+                    "name": "高级Web",
+                    "teacher_id": 1,
+                    "image": "http://localhost:5300/assets/images/course/1.jpg",
+                    "student_num": 50
+                },
+                {
+                    "id": 2,
+                    "name": "计算机图形学",
+                    "teacher_id": 2,
+                    "image": "http://localhost:5300/assets/images/course/2.jpg",
+                    "student_num": 40
+                },
+                {
+                    "id": 3,
+                    "name": "软件过程",
+                    "teacher_id": 3,
+                    "image": "http://localhost:5300/assets/images/course/3.jpg",
+                    "student_num": 45
+                },
+                {
+                    "id": 4,
+                    "name": "软件质量保障与测试",
+                    "teacher_id": 4,
+                    "image": "http://localhost:5300/assets/images/course/4.jpg",
+                    "student_num": 35
+                }
+            ]
+        }
+    ],
+    "courses": [
+        {
+            "id": 1,
+            "name": "高级Web",
+            "teacher_id": 1,
+            "image": "http://localhost:5300/assets/images/course/1.jpg",
+            "student_num": 50
+        },
+        {
+            "id": 2,
+            "name": "计算机图形学",
+            "teacher_id": 2,
+            "image": "http://localhost:5300/assets/images/course/2.jpg",
+            "student_num": 40
+        },
+        {
+            "id": 3,
+            "name": "软件过程",
+            "teacher_id": 3,
+            "image": "http://localhost:5300/assets/images/course/3.jpg",
+            "student_num": 45
+        },
+        {
+            "id": 4,
+            "name": "软件质量保障与测试",
+            "teacher_id": 4,
+            "image": "http://localhost:5300/assets/images/course/4.jpg",
+            "student_num": 35
+        },
+        {
+            "id": 5,
+            "name": "系统程序设计",
+            "teacher_id": 5,
+            "image": "http://localhost:5300/assets/images/course/5.jpg",
+            "student_num": 40
+        },
+        {
+            "id": 6,
+            "name": "计算机网络",
+            "teacher_id": 6,
+            "image": "http://localhost:5300/assets/images/course/6.jpg",
+            "student_num": 50
+        },
+        {
+            "id": 7,
+            "name": "算法与数据结构",
+            "teacher_id": 7,
+            "image": "http://localhost:5300/assets/images/course/7.jpg",
+            "student_num": 50
+        },
+        {
+            "id": 8,
+            "name": "面向对象程序设计",
+            "teacher_id": 8,
+            "image": "http://localhost:5300/assets/images/course/8.jpg",
+            "student_num": 35
+        }
+    ],
+    "notes": [
+        {
+            "student_id": 1,
+            "notes": [
+                {
+                    "student_id": 1,
+                    "content_id": 1,
+                    "text": "发现软件的错误、可以界定错误的原因、证明软件的正确性。软件测试是软件质量保障的一个重要手段。",
+                    "content_text": "软件测试有什么好处？"
+                },
+                {
+                    "student_id": 1,
+                    "content_id": 2,
+                    "text": "功能性需求、非功能性需求以及约束条件。",
+                    "content_text": "需求的三种类型是什么？"
+                },
+                {
+                    "student_id": 1,
+                    "content_id": 3,
+                    "text": "性能、可靠性、易用性、易维护性、可移植性、易改变性。",
+                    "content_text": "质量需求的main points"
+                },
+                {
+                    "student_id": 1,
+                    "content_id": 4,
+                    "text": "UML的目标是以面向对象的方式来描述任何类型的系统，具有很宽的应用领域，最常用的是建立软件系统的模型。",
+                    "content_text": "UML建模语言的用途"
+                },
+                {
+                    "student_id": 1,
+                    "content_id": 5,
+                    "text": "用例、参与者、系统边界、扩展关系、包含关系、参与者与用例之间的关系。",
+                    "content_text": "UML用例图的基本元素"
+                },
+                {
+                    "student_id": 1,
+                    "content_id": 6,
+                    "text": "等价类划分、边界值分析、决策表测试、状态转换测试。",
+                    "content_text": "黑盒测试技术"
+                },
+                {
+                    "student_id": 1,
+                    "content_id": 7,
+                    "text": "在输入条件规定了取值范围或值的个数的情况下，可以确立一个有效等价类和两个无效等价类。",
+                    "content_text": "等价类划分的原则1"
+                },
+                {
+                    "student_id": 1,
+                    "content_id": 8,
+                    "text": "在输入条件规定了输入值的集合或者规定了\"必须如何\"的条件的情况下，可以确立一个有效等价类和一个无效等价类。",
+                    "content_text": "等价类划分的原则2"
+                }
+            ]
+        },
+        {
+            "student_id": 2,
+            "notes": [
+                {
+                    "student_id": 2,
+                    "content_id": 1,
+                    "text": "",
+                    "content_text": ""
+                },
+                {
+                    "student_id": 2,
+                    "content_id": 2,
+                    "text": "",
+                    "content_text": ""
+                },
+                {
+                    "student_id": 2,
+                    "content_id": 3,
+                    "text": "",
+                    "content_text": ""
+                },
+                {
+                    "student_id": 2,
+                    "content_id": 4,
+                    "text": "",
+                    "content_text": ""
+                },
+                {
+                    "student_id": 2,
+                    "content_id": 5,
+                    "text": "",
+                    "content_text": ""
+                },
+                {
+                    "student_id": 2,
+                    "content_id": 6,
+                    "text": "",
+                    "content_text": ""
+                },
+                {
+                    "student_id": 2,
+                    "content_id": 7,
+                    "text": "",
+                    "content_text": ""
+                },
+                {
+                    "student_id": 1,
+                    "content_id": 8,
+                    "text": "",
+                    "content_text": ""
+                }
+            ]
+        }
+    ]
+}
