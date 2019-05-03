@@ -1,1 +1,98 @@
-/* pages/content/content.wxss */
+page {
+  background-color: #eeeeee;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+scroll-view {
+  background-color: #eeeeee;
+  /* height必须要设置为固定的值，不然无法scroll-top不起作用 */
+  height: 90vh;
+}
+
+.content {
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10rpx;
+}
+
+.message {
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 10rpx;
+}
+
+scroll-view image {
+  height: 64rpx;
+  width: 64rpx;
+  border-radius: 25%;
+  margin-top: 20rpx;
+}
+
+.triangle {
+  background: #ffffff;
+  width: 20rpx;
+  height: 20rpx;
+  left: 90rpx;
+  margin-top: 64rpx;
+  position: absolute;
+  transform: rotate(45deg);
+}
+
+scroll-view text{
+  background-color: #ffffff;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  padding: 20rpx;
+  max-width: 500rpx;
+  border-radius: 15rpx;
+  margin-top: 40rpx;
+  margin-left: 16rpx;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0rpx;
+  width: 100%;
+  height: 8vh;
+  border-width: 1rpx 0rpx 0rpx 0rpx;
+  border-style: solid;
+  border-color: #cccccc;
+}
+
+.footer input {
+  border-width: 1prx;
+  background-color: #ffffff;
+  border-radius: 10rpx;
+  width: 60%;
+  height: 50%;
+  margin-left: 20rpx;
+  font-size: 25rpx;
+  margin-top: 2vh;
+
+}
+
+.post {
+  width: 20%;
+  height: 5vh;
+  border-radius: 40rpx;
+  font-size: 25rpx;
+  margin-top: 1.5vh;
+  text-align: center;
+}
+
+.next {
+  height: 32rpx;
+  width: 43rpx;
+  background-color: transparent;
+  margin-top: 3vh;
+  margin-right: 20rpx;
+}

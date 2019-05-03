@@ -1,5 +1,4 @@
 {
-  "usingComponents": {
-    "Selector": "../../components/selector/selector"
-  }
+  "usingComponents": {},
+  "navigationBarTitleText": "课程"
 }

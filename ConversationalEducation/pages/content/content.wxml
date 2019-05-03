@@ -1,2 +1,12 @@
-<!--pages/content/content.wxml-->
-<text>pages/content/content.wxml</text>
+<scroll-view scroll-y="true" scroll-top="{{top}}">
+  <view class="content" wx:for="{{readContents}}">
+    <image src='{{item.image}}'></image>
+    <view class="triangle"></view>
+    <text>{{item.text}}</text>
+  </view>
+</scroll-view>
+<view class='footer'>
+  <input bindinput='message'></input>
+  <button class='post' type='primary' lang='zh_CN' bindtap="postMessage">发送</button>
+  <image class='next' src='/assets/images/next.png' bindtap='nextContent'></image>
+</view>
