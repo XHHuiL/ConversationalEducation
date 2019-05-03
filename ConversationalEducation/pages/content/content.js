@@ -66,6 +66,9 @@ Page({
       this.setData({
         top: 1000*this.data.index
       });
+      this.setData({
+        currentMessage: ''
+      });
     }
   }
 })
