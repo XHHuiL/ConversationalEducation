@@ -1,19 +1,20 @@
 <scroll-view scroll-y="true" scroll-top="{{top}}">
   <view wx:for="{{readContents}}">
-    <view class="content" wx:if="{{item.type == 1}}">
+    <view class='message' wx:if="{{item.type == 2}}">
       <image src='{{item.image}}'></image>
       <view class="triangle"></view>
-      <text>{{item.text}}</text>
+      <text bindtap='onclick'>{{item.text}}</text>
     </view>
-    <view class='message' wx:else>
+    <view class="content" wx:else>
       <image src='{{item.image}}'></image>
       <view class="triangle"></view>
-      <text>{{item.text}}</text>
+      <!-- <navigator url='../../pages/add-note/add-note?content={{item.text}}'> -->
+      <text data-content ="{{item.text}}" bindtap='onclick'>{{item.text}}</text>
     </view>
   </view>
 </scroll-view>
 <view class='footer'>
-  <input bindinput='message' value="{{currentMessage}}"></input>
+  <input bindinput='message'></input>
   <button class='post' type='primary' lang='zh_CN' bindtap="postMessage">发送</button>
   <image class='next' src='/assets/images/next.png' bindtap='nextContent'></image>
 </view>
