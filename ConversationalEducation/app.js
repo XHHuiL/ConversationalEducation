@@ -16,8 +16,6 @@ App({
           wx.getUserInfo({
             success: res => {
               this.globalData.userInfo = res.userInfo
-              console.log("wx getSetting");
-              console.log(res.userInfo);
               if (this.userInfoReadyCallback) {
                 this.userInfoReadyCallback(res)
               }

@@ -17,13 +17,11 @@ Page({
         'Content-Type': 'application/json'
       },
       success: function (res) {
-        console.log(res);
         that.setData({
           contents: res.data[0].contents,
           length: res.data[0].contents.length,
           image_url: getApp().globalData.userInfo.avatarUrl
         });
-        console.log(that.data.contents);
       }
     });
   },
@@ -45,8 +43,6 @@ Page({
         top: 1000*this.data.index
       });
     }
-    console.log(this.data.top);
-    console.log(this.data.readContents);
   },
 
   postMessage: function(e) {

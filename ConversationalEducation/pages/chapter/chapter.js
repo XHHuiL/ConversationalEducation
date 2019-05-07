@@ -12,11 +12,9 @@ Page({
         'Content-Type': 'application/json'
       },
       success: function (res) {
-        console.log(res);
         that.setData({
           chapters: res.data[0].chapters
         });
-        console.log(that.data.chapters);
       }
     });
   },

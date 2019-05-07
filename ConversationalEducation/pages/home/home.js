@@ -12,11 +12,9 @@ Page({
         'Content-Type': 'application/json'
       },
       success: function (res) {
-        console.log(res);
         that.setData({
           courses: res.data
         });
-        console.log(that.data.courses);
       }
     });
   },
@@ -28,11 +26,9 @@ Page({
         'Content-Type': 'application/json'
       },
       success: function (res) {
-        console.log(res);
         that.setData({
           courses: res.data
         });
-        console.log(that.data.courses);
       }
     });
   },
@@ -44,11 +40,9 @@ Page({
         'Content-Type': 'application/json'
       },
       success: function (res) {
-        console.log(res);
         that.setData({
           courses: res.data[0].courses
         });
-        console.log(that.data.courses);
       }
     });
   },
@@ -60,11 +54,9 @@ Page({
         'Content-Type': 'application/json'
       },
       success: function (res) {
-        console.log(res);
         that.setData({
           courses: res.data[0].courses
         });
-        console.log(that.data.courses);
       }
     });
   }

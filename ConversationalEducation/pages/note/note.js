@@ -12,11 +12,9 @@ Page({
       },
       success: function (res) {
         if(res){
-          console.log(res);
           that.setData({
             notes: res.data[0].notes
           });
-          console.log(that.data.notes);
         }
       }
     });

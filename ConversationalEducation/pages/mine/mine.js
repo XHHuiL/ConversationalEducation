@@ -7,7 +7,6 @@ Page({
   },
 
   onLoad: function (options) {
-    console.log("mine onLoad()");
     var globalData = getApp().globalData.userInfo;
     var sex = "女";
     if(globalData.gender == 1){
