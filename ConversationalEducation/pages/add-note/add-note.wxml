@@ -1,0 +1,6 @@
+<!--pages/add-note/add-note.wxml-->
+<view class='body'>
+  <text>{{content}}</text>
+  <textarea maxlength="300" value="{{old_note}}" auto-focus bindinput='changeNote'/>
+  <button type='primary' lang='zh_CN' bindtap='saveNote'>保存</button>
+</view>
