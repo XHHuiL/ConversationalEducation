@@ -1,0 +1,37 @@
+page {
+  background-color: #eeeeee;
+}
+
+.body {
+  background-color: #ffffff;
+  border-radius: 10rpx;
+  margin: 20rpx;
+  padding: 15rpx;
+}
+
+text {
+  margin-top: 10rpx;
+  line-height: 45rpx;
+  font-size: 35rpx;
+  font-weight: bold;
+  margin-left: 5rpx;
+  color: #333333;
+}
+
+textarea {
+  display: block;
+  margin-top: 10rpx;
+  margin-left: 30rpx;
+  line-height: 35rpx;
+  font-size: 25rpx;
+  height: 500rpx;
+  width: 600rpx;
+  color: #666666;
+}
+
+button {
+  width: 200rpx;
+  border-radius: 80rpx;
+  margin: 40rpx auto 0rpx auto;
+  font-size: 35rpx;
+}

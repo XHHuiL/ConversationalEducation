@@ -10,7 +10,8 @@
     "pages/change-student-number/change-student-number",
     "pages/change-note/change-note",
     "pages/chapter/chapter",
-    "pages/content/content"
+    "pages/content/content",
+    "pages/add-note/add-note"
   ],
   "window": {
     "backgroundTextStyle": "light",

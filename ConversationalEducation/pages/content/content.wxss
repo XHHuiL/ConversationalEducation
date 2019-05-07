@@ -1,5 +1,5 @@
 page {
-  background-color: #eeeeee;
+  background-color: #eee;
 }
 
 ::-webkit-scrollbar {
@@ -9,7 +9,7 @@ page {
 }
 
 scroll-view {
-  background-color: #eeeeee;
+  background-color: #eee;
   /* height必须要设置为固定的值，不然无法scroll-top不起作用 */
   height: 90vh;
 }
@@ -35,18 +35,8 @@ scroll-view image {
   margin-top: 20rpx;
 }
 
-.content .triangle {
-  background: #ffffff;
-  width: 20rpx;
-  height: 20rpx;
-  left: 90rpx;
-  margin-top: 64rpx;
-  position: absolute;
-  transform: rotate(45deg);
-}
-
-.message .triangle {
-  background: #ffffff;
+scroll-view .message .triangle {
+  background: #fff;
   width: 20rpx;
   height: 20rpx;
   right: 90rpx;
@@ -55,8 +45,29 @@ scroll-view image {
   transform: rotate(45deg);
 }
 
-scroll-view text{
-  background-color: #ffffff;
+scroll-view  .message text {
+  background-color: #fff;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  padding: 20rpx;
+  max-width: 500rpx;
+  border-radius: 15rpx;
+  margin-top: 40rpx;
+  margin-right: 16rpx;
+}
+
+.content .triangle {
+  background: #fff;
+  width: 20rpx;
+  height: 20rpx;
+  left: 90rpx;
+  margin-top: 64rpx;
+  position: absolute;
+  transform: rotate(45deg);
+}
+
+scroll-view  .content text {
+  background-color: #fff;
   font-size: 24rpx;
   line-height: 40rpx;
   padding: 20rpx;
@@ -64,7 +75,6 @@ scroll-view text{
   border-radius: 15rpx;
   margin-top: 40rpx;
   margin-left: 16rpx;
-  margin-right: 16rpx;
 }
 
 .footer {
@@ -76,19 +86,18 @@ scroll-view text{
   height: 8vh;
   border-width: 1rpx 0rpx 0rpx 0rpx;
   border-style: solid;
-  border-color: #cccccc;
+  border-color: #ccc;
 }
 
 .footer input {
   border-width: 1prx;
-  background-color: #ffffff;
+  background-color: #fff;
   border-radius: 10rpx;
   width: 60%;
   height: 50%;
   margin-left: 20rpx;
   font-size: 25rpx;
   margin-top: 2vh;
-
 }
 
 .post {

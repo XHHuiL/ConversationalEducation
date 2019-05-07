@@ -9,7 +9,7 @@ Page({
     messageLength: 0
   },
 
-  onLoad: function (options) {
+  onLoad: function(options) {
     var that = this;
     wx.request({
       url: 'http://localhost:5300/content/' + options.chapter_id,
@@ -26,27 +26,40 @@ Page({
     });
   },
 
-  message: function(e){
+  onclick: function(e) {
+    var that = this;
+    that.setData({
+      item_text: e.currentTarget.dataset.content,
+    })
+
+    wx.navigateTo({
+      url: '../../pages/add-note/add-note?content=' + that.data.item_text,
+    })
+
+  },
+
+
+  message: function(e) {
     this.setData({
       currentMessage: e.detail.value
     });
   },
 
   nextContent: function(e) {
-    if(this.data.index < this.data.length - 1 + this.data.messageLength){
-      this.data.index = this.data.index+1;
-      var s = 'readContents[' + this.data.index+']';
+    if (this.data.index < this.data.length - 1 + this.data.messageLength) {
+      this.data.index = this.data.index + 1;
+      var s = 'readContents[' + this.data.index + ']';
       this.setData({
         [s]: this.data.contents[this.data.index - this.data.messageLength]
       });
       this.setData({
-        top: 1000*this.data.index
+        top: 1000 * this.data.index
       });
     }
   },
 
   postMessage: function(e) {
-    if(this.data.currentMessage != ""){
+    if (this.data.currentMessage != "") {
       this.data.index = this.data.index + 1;
       var s = 'readContents[' + this.data.index + ']';
       var messageData = {
@@ -57,14 +70,13 @@ Page({
       };
       this.setData({
         [s]: messageData,
-        messageLength: this.data.messageLength+1 
+        messageLength: this.data.messageLength + 1
       });
       this.setData({
-        top: 1000*this.data.index
-      });
-      this.setData({
-        currentMessage: ''
+        top: 1000 * this.data.index
       });
     }
   }
+
+
 })
