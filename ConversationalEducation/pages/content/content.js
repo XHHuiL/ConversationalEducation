@@ -70,7 +70,8 @@ Page({
       };
       this.setData({
         [s]: messageData,
-        messageLength: this.data.messageLength + 1
+        messageLength: this.data.messageLength + 1,
+        currentMessage: ""
       });
       this.setData({
         top: 1000 * this.data.index
