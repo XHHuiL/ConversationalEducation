@@ -1,33 +1,34 @@
 const app = getApp()
 
 Page({
-  data:{
+  data: {
     // 存储用户的信息
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
-  onLoad: function () {
-    // 如果全局数据中已经存有用户信息，那么直接使用
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    }
-    // 否则进行网络请求，使用回调函数设置用户信息
-    else if(this.data.canIUse){
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        });
-      }
-    }
+  onLoad: function() {
+    // try {
+    //   app.globalData.userInfo = wx.getStorageSync('userInfo');
+    //   app.globalData.hasUserInfo = wx.getStorageSync('hasUserInfo');
+    //   this.setData({
+    //     userInfo: app.globalData.userInfo,
+    //     hasUserInfo: true
+    //   });
+    // } catch (e) {
+    //   console.log('no such key!');
+    // }
   },
   getUserInfo: function(e) {
     app.globalData.userInfo = e.detail.userInfo;
-    if(e.detail.userInfo){
+    app.globalData.hasUserInfo = true;
+    try {
+      wx.setStorageSync('userInfo', app.globalData.userInfo);
+      wx.setStorageSync('hasUserInfo', app.globalData.hasUserInfo);
+    } catch (e) {
+      console.log('set key error!');
+    }
+    if (e.detail.userInfo) {
       // 设置授权信息
       this.setData({
         userInfo: e.detail.userInfo,

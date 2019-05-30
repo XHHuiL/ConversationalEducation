@@ -1,32 +1,55 @@
 App({
-  onLaunch: function () {
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+  globalData: {
+    userInfo: null,
+    hasUserInfo: false,
+    student_id: 1
+  },
+
+  onLaunch: function() {
     // 登录
     wx.login({
       success: res => {
-      }
-    })
-    // 获取用户信息
-    wx.getSetting({
-      success: res => {
-        if (res.authSetting['scope.userInfo']) {
+        var code = res.code;
+        if (code) {
           wx.getUserInfo({
-            success: res => {
-              this.globalData.userInfo = res.userInfo
-              if (this.userInfoReadyCallback) {
-                this.userInfoReadyCallback(res)
-              }
+            success: function(r) {
+              wx.request({
+                url: 'http://localhost:8080/user/authenticate',
+                method: 'POST',
+                data: {
+                  encryptedData: r.encryptedData,
+                  iv: r.iv,
+                  code: code
+                },
+                success: function(res) {
+                  console.log(res.data);
+                },
+                fail: function() {
+                  console.log("http request fail!");
+                }
+              });
+            },
+            fail: function() {
+              console.log("get user information fail!");
             }
-          })
+          });
         }
       }
-    })
-  },
-  globalData: {
-    userInfo: null,
-    student_id: 1
+    });
+    // // 获取用户信息
+    // wx.getSetting({
+    //   success: res => {
+    //     if (res.authSetting['scope.userInfo']) {
+    //       wx.getUserInfo({
+    //         success: res => {
+    //           this.globalData.userInfo = res.userInfo
+    //           if (this.userInfoReadyCallback) {
+    //             this.userInfoReadyCallback(res);
+    //           }
+    //         }
+    //       })
+    //     }
+    //   }
+    // })
   }
 })
