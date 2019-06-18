@@ -7,13 +7,13 @@ Page({
   onLoad: function (e) {
     var that = this;
     wx.request({
-      url: 'http://localhost:5300/courses',
+      url: 'http://localhost:8080/course/all',
       headers: {
         'Content-Type': 'application/json'
       },
       success: function (res) {
         that.setData({
-          courses: res.data
+          courses: res.data.courses
         });
       }
     });
@@ -21,13 +21,13 @@ Page({
   allCourses: function(e) {
     var that = this;
     wx.request({
-      url: 'http://localhost:5300/courses',
+      url: 'http://localhost:8080/course/all',
       headers: {
         'Content-Type': 'application/json'
       },
       success: function (res) {
         that.setData({
-          courses: res.data
+          courses: res.data.courses
         });
       }
     });
@@ -35,13 +35,13 @@ Page({
   selectedCourses: function(e) {
     var that = this;
     wx.request({
-      url: 'http://localhost:5300/courses/selected/'+getApp().globalData.student_id,
+      url: 'http://localhost:8080/course/selected/'+getApp().globalData.openId,
       headers: {
         'Content-Type': 'application/json'
       },
       success: function (res) {
         that.setData({
-          courses: res.data[0].courses
+          courses: res.data.courses
         });
       }
     });
@@ -49,13 +49,13 @@ Page({
   unselectedCourses: function(e) {
     var that = this;
     wx.request({
-      url: 'http://localhost:5300/courses/unselected/' + getApp().globalData.student_id,
+      url: 'http://localhost:8080/course/unselected/' + getApp().globalData.openId,
       headers: {
         'Content-Type': 'application/json'
       },
       success: function (res) {
         that.setData({
-          courses: res.data[0].courses
+          courses: res.data.courses
         });
       }
     });

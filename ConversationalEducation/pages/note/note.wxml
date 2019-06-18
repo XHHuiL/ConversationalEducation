@@ -1,11 +1,12 @@
 <view class="body">
   <scroll-view scroll-y="true">
-    <navigator wx:for="{{notes}}" data-index="index"
-     url='../../pages/change-note/change-note?old_note={{item.text}}&content={{item.content_text}}&index={{index}}'>
-      <button>
-        <text class='content'>{{item.content_text}}</text>
-        <text class='note'>{{item.text}}</text>
-      </button >
-    </navigator>
+    <view wx:for="{{notes}}" data-index="index">
+      <navigator url='../../pages/change-note/change-note?old_note={{item.text}}&content={{item.contentText}}&index={{index}}&id={{item.id}}'>
+        <button>
+          <text class='content'>{{item.contentText}}</text>
+          <text class='note'>{{item.text}}</text>
+        </button>
+      </navigator>
+    </view>
   </scroll-view>
 </view>

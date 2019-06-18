@@ -29,9 +29,21 @@ textarea {
   color: #666666;
 }
 
+.option {
+  display: flex;
+  direction: row;
+}
+
 button {
   width: 200rpx;
   border-radius: 80rpx;
   margin: 40rpx auto 0rpx auto;
   font-size: 35rpx;
+}
+
+image {
+  margin-top: 60rpx;
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 24rpx;
 }

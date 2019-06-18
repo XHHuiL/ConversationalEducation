@@ -8,7 +8,8 @@ Page({
   onLoad: function (options) {
     this.setData({
       old_email: options.old_email,
-      new_email: options.old_email
+      new_email: options.old_email,
+      id: options.id
     });
   },
 
@@ -19,14 +20,26 @@ Page({
   },
 
   saveEmail: function () {
-    var pages = getCurrentPages();
-    var prePage = pages[pages.length - 2];
+    var id = this.data.id;
     var new_email = this.data.new_email;
-    prePage.setData({
-      email: new_email
-    });
-    wx.navigateBack({
-      delta: 1
+    wx.request({
+      url: 'http://localhost:8080/user/' + id,
+      method: 'PUT',
+      data: {
+        id: id,
+        email: new_email
+      },
+      success: function () {
+        wx.navigateBack({
+          delta: 1
+        });
+      },
+      fail: function () {
+        console.log("http request fail!");
+        wx.navigateBack({
+          delta: 1
+        });
+      }
     });
   }
 })

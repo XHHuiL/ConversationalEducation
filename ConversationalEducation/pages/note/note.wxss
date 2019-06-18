@@ -44,3 +44,12 @@ button .note {
   color: #666666;
 }
 
+image {
+  /* position: absolute; */
+  /* right: 12rpx; */
+  /* top: 24rpx; */
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 24rpx;
+}
+

@@ -66,7 +66,7 @@ scroll-view  .message text {
   transform: rotate(45deg);
 }
 
-scroll-view  .content text {
+scroll-view  .content navigator {
   background-color: #fff;
   font-size: 24rpx;
   line-height: 40rpx;

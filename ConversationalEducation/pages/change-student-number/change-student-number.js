@@ -8,7 +8,8 @@ Page({
   onLoad: function (options) {
     this.setData({
       old_student_number: options.old_student_number,
-      new_student_number: options.old_student_number
+      new_student_number: options.old_student_number,
+      id: options.id
     });
   },
 
@@ -19,14 +20,26 @@ Page({
   },
 
   saveStudentNumber: function () {
-    var pages = getCurrentPages();
-    var prePage = pages[pages.length - 2];
+    var id = this.data.id;
     var new_student_number = this.data.new_student_number;
-    prePage.setData({
-      student_number: new_student_number
-    });
-    wx.navigateBack({
-      delta: 1
+    wx.request({
+      url: 'http://localhost:8080/user/' + id,
+      method: 'PUT',
+      data: {
+        id: id,
+        number: new_student_number
+      },
+      success: function () {
+        wx.navigateBack({
+          delta: 1
+        });
+      },
+      fail: function () {
+        console.log("http request fail!");
+        wx.navigateBack({
+          delta: 1
+        });
+      }
     });
   }
 })

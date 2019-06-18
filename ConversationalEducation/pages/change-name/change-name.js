@@ -8,7 +8,8 @@ Page({
   onLoad: function (options) {
     this.setData({
       old_name: options.old_name,
-      new_name: options.old_name
+      new_name: options.old_name,
+      id: options.id
     });
   },
 
@@ -19,14 +20,26 @@ Page({
   },
 
   saveName: function(){
-    var pages = getCurrentPages();
-    var prePage = pages[pages.length - 2];
+    var id = this.data.id;
     var new_name = this.data.new_name;
-    prePage.setData({
-      name: new_name
-    });
-    wx.navigateBack({
-      delta: 1
+    wx.request({
+      url: 'http://localhost:8080/user/' + id,
+      method: 'PUT',
+      data: {
+        id: id,
+        nickname: new_name
+      },
+      success: function () {
+        wx.navigateBack({
+          delta: 1
+        });
+      },
+      fail: function () {
+        console.log("http request fail!");
+        wx.navigateBack({
+          delta: 1
+        });
+      }
     });
   }
 })

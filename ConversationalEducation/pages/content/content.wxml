@@ -3,12 +3,15 @@
     <view class='message' wx:if="{{item.type == 2}}">
       <image src='{{item.image}}'></image>
       <view class="triangle"></view>
-      <text bindtap='onclick'>{{item.text}}</text>
+      <text>{{item.text}}</text>
     </view>
+
     <view class="content" wx:else>
-      <image src='{{item.image}}'></image>
+      <image src='{{teacherHeadSculpture}}'></image>
       <view class="triangle"></view>
-      <text data-content ="{{item.text}}" bindtap='onclick'>{{item.text}}</text>
+      <navigator url='../../pages/add-note/add-note?contentText={{item.text}}&contentId={{item.id}}'>
+        <text data-content="{{item.text}}">{{item.text}}</text>
+      </navigator>
     </view>
   </view>
 </scroll-view>

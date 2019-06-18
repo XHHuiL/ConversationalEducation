@@ -1,19 +1,35 @@
 Page({
 
-  data: {
-  },
+  data: {},
 
-  onLoad: function (options) {
+  onLoad: function(options) {
     var that = this;
     wx.request({
-      url: 'http://localhost:5300/notes/' + getApp().globalData.student_id,
+      url: 'http://localhost:8080/notes/' + getApp().globalData.openId,
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      success: function(res) {
+        if (res) {
+          that.setData({
+            notes: res.data
+          });
+        }
+      }
+    });
+  },
+
+  onShow: function(){
+    var that = this;
+    wx.request({
+      url: 'http://localhost:8080/notes/' + getApp().globalData.openId,
       headers: {
         'Content-Type': 'application/json'
       },
       success: function (res) {
-        if(res){
+        if (res) {
           that.setData({
-            notes: res.data[0].notes
+            notes: res.data
           });
         }
       }

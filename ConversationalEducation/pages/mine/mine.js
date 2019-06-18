@@ -1,21 +1,57 @@
 // pages/mine/mine.js
 Page({
 
-  data: {
-    email: "123456789@qq.com",
-    student_number: 16302010048
+  data: {},
+
+  onLoad: function(options) {
+    var that = this;
+    wx.request({
+      url: 'http://localhost:8080/user/' + getApp().globalData.openId,
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      success: function (res) {
+        if (res) {
+          that.setData({
+            info: res.data.info
+          });
+          var sex = "女";
+          if (that.data.info.sex == 1 || that.data.info.sex == null) {
+            sex = "男";
+          }
+          that.setData({
+            sex: sex
+          });
+        }
+      }
+    });
+    var globalData = getApp().globalData.userInfo;
+    this.setData({
+      image_url: globalData.avatarUrl
+    });
   },
 
-  onLoad: function (options) {
-    var globalData = getApp().globalData.userInfo;
-    var sex = "女";
-    if(globalData.gender == 1){
-      sex = "男";
-    }
-    this.setData({
-      name: globalData.nickName,
-      sex: sex,
-      image_url: globalData.avatarUrl
+  onShow: function() {
+    var that = this;
+    wx.request({
+      url: 'http://localhost:8080/user/' + getApp().globalData.openId,
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      success: function (res) {
+        if (res) {
+          that.setData({
+            info: res.data.info
+          });
+          var sex = "女";
+          if (that.data.info.sex == 1 || that.data.info.sex == null) {
+            sex = "男";
+          }
+          that.setData({
+            sex: sex
+          });
+        }
+      }
     });
   },
 
@@ -25,29 +61,53 @@ Page({
     });
   },
 
-  preventTouchMove: function(){
+  preventTouchMove: function() {
 
   },
 
-  hideModal: function () {
+  hideModal: function() {
     this.setData({
       showModal: false
     });
   },
 
-  male: function () {    
+  male: function() {
     this.hideModal();
-    // 需要调用setData()函数才能动态改变页面上的内容
-    // 直接执行this.data.sex="男"不会改变页面上的内容
     this.setData({
       sex: "男"
     });
+    var id = this.data.info.id;
+    console.log(id);
+    wx.request({
+      url: 'http://localhost:8080/user/' + id,
+      method: 'PUT',
+      data: {
+        id: id,
+        sex: 1
+      },
+      fail: function () {
+        console.log("http request fail!");
+      }
+    });
   },
 
-  female: function () {
+  female: function() {
     this.hideModal();
     this.setData({
       sex: "女"
+    });
+    var id = this.data.info.id;
+    console.log(id);
+    wx.request({
+      url: 'http://localhost:8080/user/' + id,
+      method: 'PUT',
+      data: {
+        id: id,
+        sex: 0
+      },
+      fail: function () {
+        console.log("http request fail!");
+      }
     });
   }
 })

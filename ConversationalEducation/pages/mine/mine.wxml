@@ -1,49 +1,49 @@
 <view>
-<button class='row'>
-  <text class='option'>头像</text>
-  <image class='image' src="{{image_url}}"></image>
-</button>
-<navigator url='../../pages/change-name/change-name?old_name={{name}}'>
   <button class='row'>
-    <text class='option'>昵称</text>
-    <text class='content'>{{name}}</text>
-    <image class="arrow" src='/assets/images/arrow-right.png'></image>
+    <text class='option'>头像</text>
+    <image class='image' src="{{image_url}}"></image>
   </button>
-</navigator>
-<button class='row' bindtap='showDialog'>
-  <text class='option'>性别</text>
-  <text class='content'>{{sex}}</text>
-  <image class="arrow" src='/assets/images/arrow-right.png'></image>
-</button>
-<navigator url='../../pages/change-email/change-email?old_email={{email}}'>
-  <button class='row'>
-    <text class='option'>邮箱</text>
-    <text class='content'>{{email}}</text>
-    <image class="arrow" src='/assets/images/arrow-right.png'></image>
-  </button>
-</navigator>
-<navigator url='../../pages/change-student-number/change-student-number?old_student_number={{student_number}}'>
-  <button class='row'>
-    <text class='option'>学号</text>
-    <text class='content'>{{student_number}}</text>
-    <image class="arrow" src='/assets/images/arrow-right.png'></image>
-  </button>
-</navigator>
-<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}">
-</view>
-<view class="modal-dialog" wx:if="{{showModal}}">
-  <view class="modal-title">性别</view>
-  <view class="modal-content">
-    <button bindtap='male'>
-      <text>男</text>
-      <image class='radio' src='/assets/images/selected_radio.png' wx:if="{{sex=='男'}}"></image>
-      <image class='radio' src='/assets/images/radio.png' wx:else></image>
+  <navigator url='../../pages/change-name/change-name?old_name={{info.nickname}}&id={{info.id}}'>
+    <button class='row'>
+      <text class='option'>昵称</text>
+      <text class='content'>{{info.nickname}}</text>
+      <image class="arrow" src='/assets/images/arrow-right.png'></image>
     </button>
-    <button bindtap='female'>
-      <text>女</text>
-      <image class='radio' src='/assets/images/selected_radio.png' wx:if="{{sex=='女'}}"></image>
-      <image class='radio' src='/assets/images/radio.png' wx:else></image>
+  </navigator>
+  <button class='row' bindtap='showDialog'>
+    <text class='option'>性别</text>
+    <text class='content'>{{sex}}</text>
+    <image class="arrow" src='/assets/images/arrow-right.png'></image>
+  </button>
+  <navigator url='../../pages/change-email/change-email?old_email={{info.email}}&id={{info.id}}'>
+    <button class='row'>
+      <text class='option'>邮箱</text>
+      <text class='content'>{{info.email}}</text>
+      <image class="arrow" src='/assets/images/arrow-right.png'></image>
     </button>
+  </navigator>
+  <navigator url='../../pages/change-student-number/change-student-number?old_student_number={{info.number}}&id={{info.id}}'>
+    <button class='row'>
+      <text class='option'>学号</text>
+      <text class='content'>{{info.number}}</text>
+      <image class="arrow" src='/assets/images/arrow-right.png'></image>
+    </button>
+  </navigator>
+  <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}">
   </view>
-</view>
+  <view class="modal-dialog" wx:if="{{showModal}}">
+    <view class="modal-title">性别</view>
+    <view class="modal-content">
+      <button bindtap='male'>
+        <text>男</text>
+        <image class='radio' src='/assets/images/selected_radio.png' wx:if="{{sex=='男'}}"></image>
+        <image class='radio' src='/assets/images/radio.png' wx:else></image>
+      </button>
+      <button bindtap='female'>
+        <text>女</text>
+        <image class='radio' src='/assets/images/selected_radio.png' wx:if="{{sex=='女'}}"></image>
+        <image class='radio' src='/assets/images/radio.png' wx:else></image>
+      </button>
+    </view>
+  </view>
 </view>

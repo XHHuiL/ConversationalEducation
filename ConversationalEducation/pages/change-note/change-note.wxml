@@ -1,5 +1,8 @@
 <view class='body'>
   <text>{{content}}</text>
-  <textarea maxlength="300" value="{{old_note}}" auto-focus bindinput='changeNote'/>
-  <button type='primary' lang='zh_CN' bindtap='saveNote'>保存</button>
+  <textarea maxlength="300" value="{{old_note}}" auto-focus bindinput='changeNote' />
+  <view class='option'>
+    <button type='primary' lang='zh_CN' bindtap='saveNote'>保存</button>
+    <image src='/assets/images/delete.png' bindtap='deleteNote'></image>
+  </view>
 </view>

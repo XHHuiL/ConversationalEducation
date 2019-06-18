@@ -12,32 +12,20 @@ Page({
   onLoad: function(options) {
     var that = this;
     wx.request({
-      url: 'http://localhost:5300/content/' + options.chapter_id,
+      url: 'http://localhost:8080/contents/' + options.chapter_id,
       headers: {
         'Content-Type': 'application/json'
       },
       success: function (res) {
         that.setData({
-          contents: res.data[0].contents,
-          length: res.data[0].contents.length,
+          teacherHeadSculpture: res.data.headSculpture,
+          contents: res.data.contents,
+          length: res.data.contents.length,
           image_url: getApp().globalData.userInfo.avatarUrl
         });
       }
     });
   },
-
-  onclick: function(e) {
-    var that = this;
-    that.setData({
-      item_text: e.currentTarget.dataset.content,
-    })
-
-    wx.navigateTo({
-      url: '../../pages/add-note/add-note?content=' + that.data.item_text,
-    })
-
-  },
-
 
   message: function(e) {
     this.setData({
