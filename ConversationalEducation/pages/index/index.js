@@ -7,6 +7,7 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
+
   onLoad: function() {
     var deadTime = parseInt(wx.getStorageSync('deadTime'));
     if (deadTime) {

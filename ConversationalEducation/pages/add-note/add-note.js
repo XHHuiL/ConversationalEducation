@@ -26,13 +26,19 @@ Page({
         contentId: this.data.contentId,
         text: this.data.text
       },
+      success: function(res) {
+        var pages = getCurrentPages();
+        wx.navigateBack({
+          delta: 1
+        });
+      },
       fail: function() {
-        console.log("http request fail!");
+        wx.showToast({
+          title: '未知错误',
+          image: "/assets/images/warning.png",
+          duration: 2000
+        });
       }
-    });
-    var pages = getCurrentPages();
-    wx.navigateBack({
-      delta: 1
     });
   }
 })

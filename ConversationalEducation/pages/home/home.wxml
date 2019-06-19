@@ -13,7 +13,8 @@
 </view>
 <view class="cu-list menu-avatar">
   <view class="cu-item" wx:for="{{courses}}" wx:key bindtap='showModal' data-id='{{item.id}}'>
-    <view class="cu-avatar round lg" style="background-image:url({{item.image}});"></view>
+    <view wx:if="{{item.image}}" class="cu-avatar round lg" style="background-image:url({{item.image}});"></view>
+    <view wx:else class="cu-avatar round lg"></view>
     <view class="content">
       <view class="text-pink">{{item.name}}</view>
       <view class="text-gray text-sm flex">

@@ -1,14 +1,3 @@
-<!-- <scroll-view scroll-y="true">
-  <navigator wx:for="{{chapters}}" wx:key data-index="index" url='../../pages/content/content?chapterId={{item.id}}'>
-    <button> 
-      <text>{{item.name}}</text> 
-      <image src='/assets/images/enter.png'></image>
-    </button >
-  </navigator>
-</scroll-view> -->
-
-
-
 <view class="cu-bar bg-white solid-bottom">
   <view class="action">
     <text class="cuIcon-title text-orange"></text> 所有章节
