@@ -33,7 +33,7 @@ Page({
       success: res => {
         var code = res.code;
         wx.request({
-          url: "http://192.168.1.108:8080/user/login",
+          url: "http://101.132.190.67:80/user/login",
           method: "POST",
           data: {
             code: code

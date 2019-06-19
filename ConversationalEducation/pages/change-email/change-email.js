@@ -22,7 +22,7 @@ Page({
     var id = this.data.id;
     var new_email = this.data.new_email;
     wx.request({
-      url: "http://192.168.1.108:8080/user/" + id,
+      url: "http://101.132.190.67:80/user/" + id,
       method: "PUT",
       data: {
         id: id,

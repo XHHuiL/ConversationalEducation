@@ -7,7 +7,7 @@ Page({
   onLoad: function(options) {
     var that = this;
     wx.request({
-      url: "http://192.168.1.108:8080/chapters/" + options.courseId,
+      url: "http://101.132.190.67:80/chapters/" + options.courseId,
       headers: {
         "Content-Type": "application/json"
       },

@@ -17,7 +17,7 @@ Page({
     if (storeData) {
       that.setData(storeData);
       wx.request({
-        url: "http://192.168.1.108:8080/contents/" + options.chapterId,
+        url: "http://101.132.190.67:80/contents/" + options.chapterId,
         headers: {
           "Content-Type": "application/json"
         },
@@ -46,7 +46,7 @@ Page({
         chapterId: options.chapterId
       });
       wx.request({
-        url: "http://192.168.1.108:8080/contents/" + options.chapterId,
+        url: "http://101.132.190.67:80/contents/" + options.chapterId,
         headers: {
           "Content-Type": "application/json"
         },
@@ -113,7 +113,7 @@ Page({
         });
         var that = this;
         wx.request({
-          url: "http://192.168.1.108:8080/options/" + content.id,
+          url: "http://101.132.190.67:80/options/" + content.id,
           headers: {
             "Content-Type": "application/json"
           },
@@ -211,7 +211,7 @@ Page({
           });
           var that = this;
           wx.request({
-            url: "http://192.168.1.108:8080/answer",
+            url: "http://101.132.190.67:80/answer",
             method: "POST",
             data: {
               studentId: getApp().globalData.openId,
