@@ -10,7 +10,7 @@ Page({
       headers: {
         'Content-Type': 'application/json'
       },
-      success: function (res) {
+      success: function(res) {
         if (res) {
           that.setData({
             info: res.data.info
@@ -38,7 +38,7 @@ Page({
       headers: {
         'Content-Type': 'application/json'
       },
-      success: function (res) {
+      success: function(res) {
         if (res) {
           that.setData({
             info: res.data.info
@@ -55,19 +55,14 @@ Page({
     });
   },
 
-  showDialog: function() {
+  showModal(e) {
     this.setData({
-      showModal: true
+      modalName: e.currentTarget.dataset.target
     });
   },
-
-  preventTouchMove: function() {
-
-  },
-
-  hideModal: function() {
+  hideModal(e) {
     this.setData({
-      showModal: false
+      modalName: null
     });
   },
 
@@ -77,7 +72,6 @@ Page({
       sex: "男"
     });
     var id = this.data.info.id;
-    console.log(id);
     wx.request({
       url: 'http://localhost:8080/user/' + id,
       method: 'PUT',
@@ -85,7 +79,7 @@ Page({
         id: id,
         sex: 1
       },
-      fail: function () {
+      fail: function() {
         console.log("http request fail!");
       }
     });
@@ -97,7 +91,6 @@ Page({
       sex: "女"
     });
     var id = this.data.info.id;
-    console.log(id);
     wx.request({
       url: 'http://localhost:8080/user/' + id,
       method: 'PUT',
@@ -105,7 +98,7 @@ Page({
         id: id,
         sex: 0
       },
-      fail: function () {
+      fail: function() {
         console.log("http request fail!");
       }
     });

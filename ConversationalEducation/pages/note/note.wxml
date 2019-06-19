@@ -1,12 +1,23 @@
-<view class="body">
-  <scroll-view scroll-y="true">
-    <view wx:for="{{notes}}" data-index="index">
+<view class="cu-bar bg-white solid-bottom">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text> 所有笔记
+  </view>
+</view>
+<view class="cu-list menu-avatar">
+  <view class="cu-item" wx:for="{{notes}}" wx:key>
+    <view class="cu-avatar round lg" style="background-color:#fff;">
+      <text wx:if="{{index%4 == 0}}" class="cuIcon-square lg text-red"></text>
+      <text wx:if="{{index%4 == 1}}" class="cuIcon-moreandroid lg text-blue"></text>
+      <text wx:if="{{index%4 == 2}}" class="cuIcon-add lg text-yellow"></text>
+      <text wx:if="{{index%4 == 3}}" class="cuIcon-attentionfill lg text-green"></text>    
+    </view>
+    <view class="content">
       <navigator url='../../pages/change-note/change-note?old_note={{item.text}}&content={{item.contentText}}&index={{index}}&id={{item.id}}'>
-        <button>
-          <text class='content'>{{item.contentText}}</text>
-          <text class='note'>{{item.text}}</text>
-        </button>
+        <view class="text-mauve text-cut">{{item.contentText}}</view>
+        <view class="text-gray text-sm flex">
+          <text class="text-cut">{{item.text}}</text>
+        </view>
       </navigator>
     </view>
-  </scroll-view>
+  </view>
 </view>

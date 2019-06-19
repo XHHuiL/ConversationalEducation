@@ -11,7 +11,8 @@
     "pages/change-note/change-note",
     "pages/chapter/chapter",
     "pages/content/content",
-    "pages/add-note/add-note"
+    "pages/add-note/add-note",
+    "pages/course/course"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -29,6 +30,12 @@
         "selectedIconPath": "assets/images/home_selected.png",
         "iconPath": "assets/images/home.png",
         "pagePath": "pages/home/home",
+        "text": "主页"
+      },
+      {
+        "selectedIconPath": "assets/images/course_selected.png",
+        "iconPath": "assets/images/course.png",
+        "pagePath": "pages/course/course",
         "text": "课程"
       },
       {

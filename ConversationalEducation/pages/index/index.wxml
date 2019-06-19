@@ -2,7 +2,7 @@
 <view class='container'>
   <view wx:if="{{!hasUserInfo && canIUse}}">
     <view class='header'>
-      <image src='/assets/images/logo.jpg'></image>
+      <image src='/assets/images/logo.png'></image>
     </view>
     <view class='content'>
       <view>申请获取以下权限</view>

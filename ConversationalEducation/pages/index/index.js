@@ -60,7 +60,7 @@ Page({
         wx.setStorageSync('userInfo', app.globalData.userInfo);
         wx.setStorageSync('hasUserInfo', app.globalData.hasUserInfo);
         var timeStamp = Date.parse(new Date());
-        timeStamp = timeStamp / 1000 + 2 * 60;
+        timeStamp = timeStamp / 1000 + 24 * 3600;
         wx.setStorageSync('deadTime', timeStamp);
       } catch (e) {
         console.log('set key error!');

@@ -2,7 +2,22 @@
   <text>{{content}}</text>
   <textarea maxlength="300" value="{{old_note}}" auto-focus bindinput='changeNote' />
   <view class='option'>
-    <button type='primary' lang='zh_CN' bindtap='saveNote'>保存</button>
-    <image src='/assets/images/delete.png' bindtap='deleteNote'></image>
+    <button class='shadow-blur' type='primary' lang='zh_CN' bindtap='saveNote'>保存</button>
+    <image src='/assets/images/delete.png' bindtap='showModal' data-id='{{id}}'></image>
+  </view>
+</view>
+
+<view class="cu-modal {{noteId != null?'show':''}}">
+  <view class="cu-dialog">
+    <view class="bg-img" style="background-image: url('http://adweb-image.oss-cn-shanghai.aliyuncs.com/dialog_image.jpg');height:200px;">
+      <view class="cu-bar justify-end text-white">
+        <view class="action" bindtap="hideModal">
+          <text class="cuIcon-close text-white"></text>
+        </view>
+      </view>
+    </view>
+    <view class="cu-bar bg-white">
+      <view class="text-red action margin-0 flex-sub  solid-left" bindtap="deleteNote">确定删除</view>
+    </view>
   </view>
 </view>

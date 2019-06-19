@@ -77,6 +77,17 @@ scroll-view  .content navigator {
   margin-left: 16rpx;
 }
 
+scroll-view  .content .options {
+  background-color: #fff;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  padding: 20rpx;
+  max-width: 500rpx;
+  border-radius: 15rpx;
+  margin-top: 40rpx;
+  margin-left: 16rpx;
+}
+
 .footer {
   display: flex;
   flex-direction: row;
@@ -109,10 +120,9 @@ scroll-view  .content navigator {
   text-align: center;
 }
 
-.next {
-  height: 32rpx;
-  width: 43rpx;
+.footer .next {
+  font-size: 48rpx;
   background-color: transparent;
-  margin-top: 3vh;
-  margin-right: 20rpx;
+  margin-top: 2vh;
+  margin-right: 24rpx;
 }

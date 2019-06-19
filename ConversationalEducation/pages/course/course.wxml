@@ -1,0 +1,33 @@
+<view class="cu-bar bg-white solid-bottom margin-top">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text> 已选课程
+  </view>
+</view> 
+<view class="cu-list menu-avatar">
+  <view class="cu-item" wx:for="{{courses}}" wx:key>
+    <view class="cu-avatar round lg" style="background-image:url({{item.image}});" 
+    bindtap='onClick' data-id='{{item.id}}'></view>
+    <view class="content" bindtap='onClick' data-id='{{item.id}}'>
+      <view class="text-mauve">{{item.name}}</view>
+      <view class="text-gray text-sm flex">
+        <text class="text-cut">{{item.description}}</text>
+      </view>
+    </view>
+    <text class="cuIcon-delete lg text-red" bindtap='showModal' data-id='{{item.id}}'></text>
+  </view>
+</view>
+
+<view class="cu-modal {{courseId != null?'show':''}}">
+  <view class="cu-dialog">
+    <view class="bg-img" style="background-image: url('http://adweb-image.oss-cn-shanghai.aliyuncs.com/dialog_image.jpg');height:200px;">
+      <view class="cu-bar justify-end text-white">
+        <view class="action" bindtap="hideModal">
+          <text class="cuIcon-close text-white"></text>
+        </view>
+      </view>
+    </view>
+    <view class="cu-bar bg-white">
+      <view class="action margin-0 flex-sub solid-left text-red" bindtap="dropCourse">退课：这会清除相应的笔记！</view>
+    </view>
+  </view>
+</view>

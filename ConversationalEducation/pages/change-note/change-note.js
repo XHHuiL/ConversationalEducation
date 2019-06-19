@@ -42,20 +42,39 @@ Page({
         });
       }
     });
+  }, 
+
+  showModal(e) {
+    this.setData({
+      noteId: e.currentTarget.dataset.id
+    });
+  },
+
+  hideModal(e) {
+    this.setData({
+      noteId: null
+    });
   },
 
   deleteNote: function(){
+    var that = this;
     var noteId = this.data.id;
     wx.request({
       url: 'http://localhost:8080/note/' + noteId,
       method: 'DELETE',
       success: function(){
+        that.setData({
+          noteId: null
+        });
         wx.navigateBack({
           delta: 1
         });
       },
       fail: function () {
         console.log("http request fail!");
+        that.setData({
+          noteId: null
+        });
         wx.navigateBack({
           delta: 1
         });

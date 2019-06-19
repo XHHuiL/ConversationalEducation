@@ -1,2 +1,2 @@
 <input value="{{old_email}}" auto-focus bindinput='changeEmail' />
-<button type='primary' lang='zh_CN' bindtap='saveEmail'>保存</button>
+<button class='shadow-blur' type='primary' lang='zh_CN' bindtap='saveEmail'>保存</button>

@@ -1,2 +1,2 @@
 <input value="{{old_name}}" auto-focus bindinput='changeName' />
-<button type='primary' lang='zh_CN' bindtap='saveName'>保存</button>
+<button class='shadow-blur' type='primary' lang='zh_CN' bindtap='saveName'>保存</button>

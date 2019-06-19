@@ -1,16 +1,42 @@
-<view class="header">
-  <button class='bottom' lang='zh_CN' bindtap='allCourses'>所有课程</button>
-  <button class='bottom' lang='zh_CN' bindtap='selectedCourses'>已选课程</button>
-  <button class='bottom' lang='zh_CN' bindtap='unselectedCourses'>未选课程</button>
+<swiper class="card-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#0081ff">
+  <swiper-item wx:for="{{swiperList}}" wx:key class="{{cardCur==index?'cur':''}}">
+    <view class="swiper-item">
+      <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+      <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
+    </view>
+  </swiper-item>
+</swiper>
+<view class="cu-bar bg-white solid-bottom margin-top">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text> 课程列表
+  </view>
 </view>
-<view class="body">
-  <scroll-view scroll-y="true">
-    <navigator wx:for="{{courses}}" url='../../pages/chapter/chapter?course_id={{item.id}}'>
-      <button class='course'>
-        <image src="{{item.image}}"></image>
-        <text>{{item.name}}</text>
-        <text class='num'>学生数：{{item.student_num}}</text>
-      </button>
-    </navigator>
-  </scroll-view>
+<view class="cu-list menu-avatar">
+  <view class="cu-item" wx:for="{{courses}}" wx:key bindtap='showModal' data-id='{{item.id}}'>
+    <view class="cu-avatar round lg" style="background-image:url({{item.image}});"></view>
+    <view class="content">
+      <view class="text-pink">{{item.name}}</view>
+      <view class="text-gray text-sm flex">
+        <text class="text-cut">{{item.description}}</text>
+      </view>
+    </view>
+    <view class="action">
+      <view class="text-cyan text-xs">选课人数</view>
+      <view class="cu-tag round bg-yellow sm">{{item.student_num}}</view>
+    </view>
+  </view> 
+</view>
+<view class="cu-modal {{courseId != null?'show':''}}">
+  <view class="cu-dialog">
+    <view class="bg-img" style="background-image: url('http://adweb-image.oss-cn-shanghai.aliyuncs.com/dialog_image.jpg');height:200px;">
+      <view class="cu-bar justify-end text-white">
+        <view class="action" bindtap="hideModal">
+          <text class="cuIcon-close text-white"></text>
+        </view>
+      </view>
+    </view>
+    <view class="cu-bar bg-white">
+      <view class="action margin-0 flex-sub  solid-left" bindtap="takeCourse">选课</view>
+    </view>
+  </view>
 </view>

@@ -1,49 +1,59 @@
-<view>
-  <button class='row'>
-    <text class='option'>头像</text>
-    <image class='image' src="{{image_url}}"></image>
-  </button>
-  <navigator url='../../pages/change-name/change-name?old_name={{info.nickname}}&id={{info.id}}'>
-    <button class='row'>
-      <text class='option'>昵称</text>
-      <text class='content'>{{info.nickname}}</text>
-      <image class="arrow" src='/assets/images/arrow-right.png'></image>
-    </button>
-  </navigator>
-  <button class='row' bindtap='showDialog'>
-    <text class='option'>性别</text>
-    <text class='content'>{{sex}}</text>
-    <image class="arrow" src='/assets/images/arrow-right.png'></image>
-  </button>
-  <navigator url='../../pages/change-email/change-email?old_email={{info.email}}&id={{info.id}}'>
-    <button class='row'>
-      <text class='option'>邮箱</text>
-      <text class='content'>{{info.email}}</text>
-      <image class="arrow" src='/assets/images/arrow-right.png'></image>
-    </button>
-  </navigator>
-  <navigator url='../../pages/change-student-number/change-student-number?old_student_number={{info.number}}&id={{info.id}}'>
-    <button class='row'>
-      <text class='option'>学号</text>
-      <text class='content'>{{info.number}}</text>
-      <image class="arrow" src='/assets/images/arrow-right.png'></image>
-    </button>
-  </navigator>
-  <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}">
+<view class="UCenter-bg">
+  <image src="{{image_url}}" class="png" mode="widthFix"></image>
+  <view class="text-xl margin-top-lg">对话式教学 v1.0
   </view>
-  <view class="modal-dialog" wx:if="{{showModal}}">
-    <view class="modal-title">性别</view>
-    <view class="modal-content">
-      <button bindtap='male'>
-        <text>男</text>
-        <image class='radio' src='/assets/images/selected_radio.png' wx:if="{{sex=='男'}}"></image>
-        <image class='radio' src='/assets/images/radio.png' wx:else></image>
-      </button>
-      <button bindtap='female'>
-        <text>女</text>
-        <image class='radio' src='/assets/images/selected_radio.png' wx:if="{{sex=='女'}}"></image>
-        <image class='radio' src='/assets/images/radio.png' wx:else></image>
-      </button>
-    </view>
+  <view class="margin-top-sm">
+    <text>By:刘辉 朱小宁 魏入磊 王萌</text>
+  </view>
+  <image src="http://adweb-image.oss-cn-shanghai.aliyuncs.com/wave.gif" mode="scaleToFill" class="gif-wave"></image>
+</view>
+
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+  <view class="cu-item arrow">
+    <navigator class="content" url='../../pages/change-name/change-name?old_name={{info.nickname}}&id={{info.id}}' hover-class="none">
+      <text class='cuIcon-friendfamous text-green'></text>
+      <text class='text-gray'>{{info.nickname}}</text>
+    </navigator>
+  </view>
+  <view class="cu-item arrow" bindtap='showModal' data-target="RadioModal">
+    <button class="cu-btn content" open-type="feedback">
+      <text class="{{sex == '女'?'cuIcon-female':'cuIcon-male'}} {{sex == '女'?'text-red':'text-blue'}}"></text>
+      <text class='text-gray'>{{sex}}</text>
+    </button>
+  </view>
+  <view class="cu-item arrow">
+    <navigator class="content" url='../../pages/change-email/change-email?old_email={{info.email}}&id={{info.id}}' hover-class="none">
+      <text class='cuIcon-mail text-purple'></text>
+      <text class='text-gray'>{{info.email}}</text>
+    </navigator>
+  </view>
+  <view class="cu-item arrow">
+    <navigator class="content" url='../../pages/change-student-number/change-student-number?old_student_number={{info.number}}&id={{info.id}}' hover-class="none">
+      <text class='cuIcon-qrcode text-yellow'></text>
+      <text class='text-gray'>{{info.number}}</text>
+    </navigator>
+  </view>
+</view>
+
+<view class="cu-modal {{modalName=='RadioModal'?'show':''}}" bindtap="hideModal">
+  <view class="cu-dialog">
+    <radio-group class="block">
+      <view class="cu-list menu text-left">
+        <view class="cu-item" bindtap='male'>
+          <label class="flex justify-between align-center flex-sub">
+            <text class="cuIcon-male text-blue"></text>
+            <text class="text-gray flex-sub">男</text>
+            <radio class="round"></radio>
+          </label>
+        </view>
+        <view class="cu-item" bindtap='female'>
+          <label class="flex justify-between align-center flex-sub">
+            <text class="cuIcon-female text-red"></text>
+            <text class="text-gray flex-sub">女</text>
+            <radio class="round"></radio>
+          </label>
+        </view>
+      </view>
+    </radio-group>
   </view>
 </view>

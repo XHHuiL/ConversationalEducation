@@ -1,0 +1,8 @@
+.margin-top {
+  margin-top: 0;
+}
+
+.cuIcon-delete {
+  margin-right: 16rpx;
+  font-size: 32rpx;
+}
