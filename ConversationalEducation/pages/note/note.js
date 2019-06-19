@@ -15,6 +15,13 @@ Page({
             notes: res.data
           });
         }
+      },
+      fail: function () {
+        wx.showToast({
+          title: '未知错误',
+          image: "/assets/images/warning.png",
+          duration: 2000
+        });
       }
     });
   },
@@ -32,6 +39,13 @@ Page({
             notes: res.data
           });
         }
+      },
+      fail: function () {
+        wx.showToast({
+          title: '未知错误',
+          image: "/assets/images/warning.png",
+          duration: 2000
+        });
       }
     });
   },

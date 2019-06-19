@@ -15,6 +15,13 @@ Page({
         that.setData({
           courses: res.data.courses
         });
+      },
+      fail: function(){
+        wx.showToast({
+          title: '未知错误',
+          image: "/assets/images/warning.png",
+          duration: 2000
+        });
       }
     });
   },
@@ -29,6 +36,13 @@ Page({
       success: function(res) {
         that.setData({
           courses: res.data.courses
+        });
+      },
+      fail: function(){
+        wx.showToast({
+          title: '未知错误',
+          image: "/assets/images/warning.png",
+          duration: 2000
         });
       }
     });
@@ -64,6 +78,10 @@ Page({
         courseId: courseId,
       },
       success: function() {
+        wx.showToast({
+          title: '退课成功',
+          duration: 2000
+        });
         wx.request({
           url: 'http://localhost:8080/course/selected/' + getApp().globalData.openId,
           headers: {
@@ -78,7 +96,11 @@ Page({
         });
       },
       fail: function() {
-        console.log("http request fail!");
+        wx.showToast({
+          title: '未知错误',
+          image: "/assets/images/warning.png",
+          duration: 2000
+        });
       }
     });
   }

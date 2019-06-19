@@ -4,23 +4,30 @@ Page({
 
   },
 
-  onLoad: function (options) { 
+  onLoad: function(options) {
     var that = this;
     wx.request({
-      url: 'http://localhost:8080/chapters/'+options.courseId,
+      url: 'http://localhost:8080/chapters/' + options.courseId,
       headers: {
         'Content-Type': 'application/json'
       },
-      success: function (res) {
+      success: function(res) {
         that.setData({
           chapters: res.data
+        });
+      },
+      fail: function() {
+        wx.showToast({
+          title: '未知错误',
+          image: "/assets/images/warning.png",
+          duration: 2000
         });
       }
     });
   },
 
-  onClick: function(e){
-    var chapterId = e.currentTarget.dataset.id; 
+  onClick: function(e) {
+    var chapterId = e.currentTarget.dataset.id;
     wx.navigateTo({
       url: '../content/content?chapterId=' + chapterId,
     });

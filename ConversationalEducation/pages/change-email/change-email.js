@@ -35,9 +35,10 @@ Page({
         });
       },
       fail: function () {
-        console.log("http request fail!");
-        wx.navigateBack({
-          delta: 1
+        wx.showToast({
+          title: '未知错误',
+          image: "/assets/images/warning.png",
+          duration: 2000
         });
       }
     });

@@ -23,6 +23,13 @@ Page({
             sex: sex
           });
         }
+      },
+      fail: function() {
+        wx.showToast({
+          title: '未知错误',
+          image: "/assets/images/warning.png",
+          duration: 2000
+        });
       }
     });
     var globalData = getApp().globalData.userInfo;
@@ -51,6 +58,13 @@ Page({
             sex: sex
           });
         }
+      },
+      fail: function() {
+        wx.showToast({
+          title: '未知错误',
+          image: "/assets/images/warning.png",
+          duration: 2000
+        });
       }
     });
   },
@@ -67,10 +81,7 @@ Page({
   },
 
   male: function() {
-    this.hideModal();
-    this.setData({
-      sex: "男"
-    });
+    var that = this;
     var id = this.data.info.id;
     wx.request({
       url: 'http://localhost:8080/user/' + id,
@@ -79,17 +90,24 @@ Page({
         id: id,
         sex: 1
       },
+      success: function() {
+        that.hideModal();
+        that.setData({
+          sex: "男"
+        });
+      },
       fail: function() {
-        console.log("http request fail!");
+        wx.showToast({
+          title: '未知错误',
+          image: "/assets/images/warning.png",
+          duration: 2000
+        });
       }
     });
   },
 
   female: function() {
-    this.hideModal();
-    this.setData({
-      sex: "女"
-    });
+    var that = this;
     var id = this.data.info.id;
     wx.request({
       url: 'http://localhost:8080/user/' + id,
@@ -98,8 +116,18 @@ Page({
         id: id,
         sex: 0
       },
+      success: function() {
+        that.hideModal();
+        that.setData({
+          sex: "女"
+        });
+      },
       fail: function() {
-        console.log("http request fail!");
+        wx.showToast({
+          title: '未知错误',
+          image: "/assets/images/warning.png",
+          duration: 2000
+        });
       }
     });
   }

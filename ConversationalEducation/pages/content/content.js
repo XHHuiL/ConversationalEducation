@@ -32,6 +32,13 @@ Page({
               index: that.data.messageLength - 1 + that.data.length
             });
           }
+        },
+        fail: function() {
+          wx.showToast({
+            title: '未知错误',
+            image: "/assets/images/warning.png",
+            duration: 2000
+          });
         }
       });
     } else {
@@ -49,6 +56,13 @@ Page({
             contents: res.data.contents,
             length: res.data.contents.length,
             image_url: getApp().globalData.userInfo.avatarUrl
+          });
+        },
+        fail: function() {
+          wx.showToast({
+            title: '未知错误',
+            image: "/assets/images/warning.png",
+            duration: 2000
           });
         }
       });
@@ -115,6 +129,13 @@ Page({
             });
             that.setData({
               top: 1000 * that.data.index
+            });
+          },
+          fail: function() {
+            wx.showToast({
+              title: '未知错误',
+              image: "/assets/images/warning.png",
+              duration: 2000
             });
           }
         });
@@ -198,7 +219,11 @@ Page({
               selectedOption: select
             },
             fail: function() {
-              console.log("http request fail!");
+              wx.showToast({
+                title: '未知错误',
+                image: "/assets/images/warning.png",
+                duration: 2000
+              });
             }
           });
         }
