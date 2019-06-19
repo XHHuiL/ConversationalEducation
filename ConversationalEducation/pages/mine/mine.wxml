@@ -10,27 +10,27 @@
 
 <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
   <view class="cu-item arrow">
-    <navigator class="content" url='../../pages/change-name/change-name?old_name={{info.nickname}}&id={{info.id}}' hover-class="none">
-      <text class='cuIcon-friendfamous text-green'></text>
-      <text class='text-gray'>{{info.nickname}}</text>
+    <navigator class="content" url="../../pages/change-name/change-name?old_name={{info.nickname}}&id={{info.id}}" hover-class="none">
+      <text class="cuIcon-friendfamous text-green"></text>
+      <text class="text-gray">{{info.nickname}}</text>
     </navigator>
   </view>
-  <view class="cu-item arrow" bindtap='showModal' data-target="RadioModal">
+  <view class="cu-item arrow" bindtap="showModal" data-target="RadioModal">
     <button class="cu-btn content" open-type="feedback">
       <text class="{{sex == '女'?'cuIcon-female':'cuIcon-male'}} {{sex == '女'?'text-red':'text-blue'}}"></text>
-      <text class='text-gray'>{{sex}}</text>
+      <text class="text-gray">{{sex}}</text>
     </button>
   </view>
   <view class="cu-item arrow">
-    <navigator class="content" url='../../pages/change-email/change-email?old_email={{info.email}}&id={{info.id}}' hover-class="none">
-      <text class='cuIcon-mail text-purple'></text>
-      <text class='text-gray'>{{info.email}}</text>
+    <navigator class="content" url="../../pages/change-email/change-email?old_email={{info.email}}&id={{info.id}}" hover-class="none">
+      <text class="cuIcon-mail text-purple"></text>
+      <text class="text-gray">{{info.email}}</text>
     </navigator>
   </view>
   <view class="cu-item arrow">
-    <navigator class="content" url='../../pages/change-student-number/change-student-number?old_student_number={{info.number}}&id={{info.id}}' hover-class="none">
-      <text class='cuIcon-qrcode text-yellow'></text>
-      <text class='text-gray'>{{info.number}}</text>
+    <navigator class="content" url="../../pages/change-student-number/change-student-number?old_student_number={{info.number}}&id={{info.id}}" hover-class="none">
+      <text class="cuIcon-qrcode text-yellow"></text>
+      <text class="text-gray">{{info.number}}</text>
     </navigator>
   </view>
 </view>
@@ -39,14 +39,14 @@
   <view class="cu-dialog">
     <radio-group class="block">
       <view class="cu-list menu text-left">
-        <view class="cu-item" bindtap='male'>
+        <view class="cu-item" bindtap="male">
           <label class="flex justify-between align-center flex-sub">
             <text class="cuIcon-male text-blue"></text>
             <text class="text-gray flex-sub">男</text>
             <radio class="round"></radio>
           </label>
         </view>
-        <view class="cu-item" bindtap='female'>
+        <view class="cu-item" bindtap="female">
           <label class="flex justify-between align-center flex-sub">
             <text class="cuIcon-female text-red"></text>
             <text class="text-gray flex-sub">女</text>

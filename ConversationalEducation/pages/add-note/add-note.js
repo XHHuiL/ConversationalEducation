@@ -19,8 +19,8 @@ Page({
 
   addNote: function() {
     wx.request({
-      url: 'http://localhost:8080/note',
-      method: 'POST',
+      url: "http://192.168.1.108:8080/note",
+      method: "POST",
       data: {
         studentId: getApp().globalData.openId,
         contentId: this.data.contentId,
@@ -34,9 +34,9 @@ Page({
       },
       fail: function() {
         wx.showToast({
-          title: '未知错误',
+          title: "未知错误",
           image: "/assets/images/warning.png",
-          duration: 2000
+          duration: 1500
         });
       }
     });

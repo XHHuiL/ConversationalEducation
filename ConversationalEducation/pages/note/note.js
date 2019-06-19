@@ -5,9 +5,9 @@ Page({
   onLoad: function(options) {
     var that = this;
     wx.request({
-      url: 'http://localhost:8080/notes/' + getApp().globalData.openId,
+      url: "http://192.168.1.108:8080/notes/" + getApp().globalData.openId,
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json"
       },
       success: function(res) {
         if (res) {
@@ -16,9 +16,9 @@ Page({
           });
         }
       },
-      fail: function () {
+      fail: function() {
         wx.showToast({
-          title: '未知错误',
+          title: "未知错误",
           image: "/assets/images/warning.png",
           duration: 2000
         });
@@ -26,23 +26,23 @@ Page({
     });
   },
 
-  onShow: function(){
+  onShow: function() {
     var that = this;
     wx.request({
-      url: 'http://localhost:8080/notes/' + getApp().globalData.openId,
+      url: "http://192.168.1.108:8080/notes/" + getApp().globalData.openId,
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json"
       },
-      success: function (res) {
+      success: function(res) {
         if (res) {
           that.setData({
             notes: res.data
           });
         }
       },
-      fail: function () {
+      fail: function() {
         wx.showToast({
-          title: '未知错误',
+          title: "未知错误",
           image: "/assets/images/warning.png",
           duration: 2000
         });

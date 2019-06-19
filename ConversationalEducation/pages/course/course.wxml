@@ -2,18 +2,17 @@
   <view class="action">
     <text class="cuIcon-title text-orange "></text> 已选课程
   </view>
-</view> 
+</view>
 <view class="cu-list menu-avatar">
   <view class="cu-item" wx:for="{{courses}}" wx:key>
-    <view class="cu-avatar round lg" style="background-image:url({{item.image}});" 
-    bindtap='onClick' data-id='{{item.id}}'></view>
-    <view class="content" bindtap='onClick' data-id='{{item.id}}'>
+    <view class="cu-avatar round lg" style="background-image:url({{item.image}});" bindtap="onClick" data-id="{{item.id}}"></view>
+    <view class="content" bindtap="onClick" data-id="{{item.id}}">
       <view class="text-mauve">{{item.name}}</view>
       <view class="text-gray text-sm flex">
         <text class="text-cut">{{item.description}}</text>
       </view>
     </view>
-    <text class="cuIcon-delete lg text-red" bindtap='showModal' data-id='{{item.id}}'></text>
+    <text class="cuIcon-delete lg text-red" bindtap="showModal" data-id="{{item.id}}"></text>
   </view>
 </view>
 

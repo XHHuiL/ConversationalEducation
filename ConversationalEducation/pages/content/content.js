@@ -13,13 +13,13 @@ Page({
 
   onLoad: function(options) {
     var that = this;
-    var storeData = wx.getStorageSync('chapter' + options.chapterId);
+    var storeData = wx.getStorageSync("chapter" + options.chapterId);
     if (storeData) {
       that.setData(storeData);
       wx.request({
-        url: 'http://localhost:8080/contents/' + options.chapterId,
+        url: "http://192.168.1.108:8080/contents/" + options.chapterId,
         headers: {
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json"
         },
         success: function(res) {
           that.setData({
@@ -35,7 +35,7 @@ Page({
         },
         fail: function() {
           wx.showToast({
-            title: '未知错误',
+            title: "未知错误",
             image: "/assets/images/warning.png",
             duration: 2000
           });
@@ -46,9 +46,9 @@ Page({
         chapterId: options.chapterId
       });
       wx.request({
-        url: 'http://localhost:8080/contents/' + options.chapterId,
+        url: "http://192.168.1.108:8080/contents/" + options.chapterId,
         headers: {
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json"
         },
         success: function(res) {
           that.setData({
@@ -60,7 +60,7 @@ Page({
         },
         fail: function() {
           wx.showToast({
-            title: '未知错误',
+            title: "未知错误",
             image: "/assets/images/warning.png",
             duration: 2000
           });
@@ -70,7 +70,7 @@ Page({
   },
 
   onUnload: function() {
-    wx.setStorageSync('chapter' + this.data.chapterId, this.data);
+    wx.setStorageSync("chapter" + this.data.chapterId, this.data);
   },
 
   message: function(e) {
@@ -82,7 +82,7 @@ Page({
   nextContent: function(e) {
     if (this.data.answerModel) {
       this.data.index = this.data.index + 1;
-      var s = 'readContents[' + this.data.index + ']';
+      var s = "readContents[" + this.data.index + "]";
       var prompt = {
         id: 0,
         text: "请发送你的答案",
@@ -99,7 +99,7 @@ Page({
     }
     if (this.data.index < this.data.length - 1 + this.data.messageLength) {
       this.data.index = this.data.index + 1;
-      var s = 'readContents[' + this.data.index + ']';
+      var s = "readContents[" + this.data.index + "]";
       var content = this.data.contents[this.data.index - this.data.messageLength];
       this.setData({
         [s]: content
@@ -113,13 +113,13 @@ Page({
         });
         var that = this;
         wx.request({
-          url: 'http://localhost:8080/options/' + content.id,
+          url: "http://192.168.1.108:8080/options/" + content.id,
           headers: {
-            'Content-Type': 'application/json'
+            "Content-Type": "application/json"
           },
           success: function(res) {
             that.data.index = that.data.index + 1;
-            var s = 'readContents[' + that.data.index + ']';
+            var s = "readContents[" + that.data.index + "]";
             var options = res.data;
             that.setData({
               [s]: options,
@@ -133,7 +133,7 @@ Page({
           },
           fail: function() {
             wx.showToast({
-              title: '未知错误',
+              title: "未知错误",
               image: "/assets/images/warning.png",
               duration: 2000
             });
@@ -146,7 +146,7 @@ Page({
   postMessage: function(e) {
     if (this.data.currentMessage != "") {
       this.data.index = this.data.index + 1;
-      var s = 'readContents[' + this.data.index + ']';
+      var s = "readContents[" + this.data.index + "]";
       var text = this.data.currentMessage;
       var messageData = {
         id: 0,
@@ -174,7 +174,7 @@ Page({
           select = 4;
         if (select == 0) {
           this.data.index = this.data.index + 1;
-          var s = 'readContents[' + this.data.index + ']';
+          var s = "readContents[" + this.data.index + "]";
           var prompt = {
             id: 0,
             text: "请回答：A / B / C / D",
@@ -193,7 +193,7 @@ Page({
             answerModel: false
           });
           this.data.index = this.data.index + 1;
-          var s = 'readContents[' + this.data.index + ']';
+          var s = "readContents[" + this.data.index + "]";
           var promptMessage = "恭喜你，回答正确";
           if (select != this.data.correctOption)
             promptMessage = "回答错误，正确答案是：" + (string)('A' + this.data.correctOption - 1);
@@ -211,8 +211,8 @@ Page({
           });
           var that = this;
           wx.request({
-            url: 'http://localhost:8080/answer',
-            method: 'POST',
+            url: "http://192.168.1.108:8080/answer",
+            method: "POST",
             data: {
               studentId: getApp().globalData.openId,
               contentId: that.data.questionId,
@@ -220,7 +220,7 @@ Page({
             },
             fail: function() {
               wx.showToast({
-                title: '未知错误',
+                title: "未知错误",
                 image: "/assets/images/warning.png",
                 duration: 2000
               });

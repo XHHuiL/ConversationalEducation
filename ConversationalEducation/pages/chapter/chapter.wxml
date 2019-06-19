@@ -2,12 +2,12 @@
   <view class="action">
     <text class="cuIcon-title text-orange"></text> 所有章节
   </view>
-</view> 
+</view>
 <view class="cu-list menu card-menu margin-top margin-bottom">
-  <view class="cu-item arrow" wx:for="{{chapters}}" wx:key bindtap="onClick" data-id ="{{item.id}}">
+  <view class="cu-item arrow" wx:for="{{chapters}}" wx:key bindtap="onClick" data-id="{{item.id}}">
     <view class="content">
-        <text class="cuIcon-tagfill text-blue"></text>
-        <text class="text-gray">{{item.name}}</text>
-      </view>
+      <text class="cuIcon-tagfill text-blue"></text>
+      <text class="text-gray">{{item.name}}</text>
+    </view>
   </view>
 </view>

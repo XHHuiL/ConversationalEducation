@@ -1,22 +1,22 @@
 <scroll-view scroll-y="true" scroll-top="{{top}}">
   <view wx:for="{{readContents}}" wx:key>
-    <view class='message' wx:if="{{item.type == 0}}">
-      <image src='{{item.image}}'></image>
+    <view class="message" wx:if="{{item.type == 0}}">
+      <image src="{{item.image}}"></image>
       <view class="triangle"></view>
       <text>{{item.text}}</text>
     </view>
     <view class="content" wx:else>
-      <image src='{{teacherHeadSculpture}}'></image>
+      <image src="{{teacherHeadSculpture}}"></image>
       <view class="triangle"></view>
-      <navigator wx:if='{{item.id != 0}}' url='../../pages/add-note/add-note?contentText={{item.text}}&contentId={{item.id}}'>
+      <navigator wx:if="{{item.id != 0}}" url="../../pages/add-note/add-note?contentText={{item.text}}&contentId={{item.id}}">
         <text data-content="{{item.text}}">{{item.text}}</text>
       </navigator>
       <text class="options" wx:else data-content="{{item.text}}">{{item.text}}</text>
     </view>
   </view>
 </scroll-view>
-<view class='footer'>
-  <input bindinput='message' value="{{currentMessage}}"></input>
-  <button class='post' type='primary' lang='zh_CN' bindtap="postMessage">发送</button>
-  <text class="cuIcon-pulldown text-blue next" bindtap='nextContent'></text>
+<view class="footer">
+  <input bindinput="message" value="{{currentMessage}}"></input>
+  <button class="post" type="primary" lang="zh_CN" bindtap="postMessage">发送</button>
+  <text class="cuIcon-pulldown text-blue next" bindtap="nextContent"></text>
 </view>

@@ -1,9 +1,9 @@
-<view class='body'>
+<view class="body">
   <text>{{content}}</text>
-  <textarea maxlength="300" value="{{old_note}}" auto-focus bindinput='changeNote' />
-  <view class='option'>
-    <button class='shadow-blur' type='primary' lang='zh_CN' bindtap='saveNote'>保存</button>
-    <image src='/assets/images/delete.png' bindtap='showModal' data-id='{{id}}'></image>
+  <textarea maxlength="300" value="{{old_note}}" auto-focus bindinput="changeNote" />
+  <view class="option">
+    <button class="shadow-blur" type="primary" lang="zh_CN" bindtap="saveNote">保存</button>
+    <image src="/assets/images/delete.png" bindtap="showModal" data-id="{{id}}"></image>
   </view>
 </view>
 

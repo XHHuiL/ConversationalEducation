@@ -1,4 +1,3 @@
-// pages/mine/mine.js
 Page({
 
   data: {},
@@ -6,9 +5,9 @@ Page({
   onLoad: function(options) {
     var that = this;
     wx.request({
-      url: 'http://localhost:8080/user/' + getApp().globalData.openId,
+      url: "http://192.168.1.108:8080/user/" + getApp().globalData.openId,
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json"
       },
       success: function(res) {
         if (res) {
@@ -26,9 +25,9 @@ Page({
       },
       fail: function() {
         wx.showToast({
-          title: '未知错误',
+          title: "未知错误",
           image: "/assets/images/warning.png",
-          duration: 2000
+          duration: 1500
         });
       }
     });
@@ -41,9 +40,9 @@ Page({
   onShow: function() {
     var that = this;
     wx.request({
-      url: 'http://localhost:8080/user/' + getApp().globalData.openId,
+      url: "http://192.168.1.108:8080/user/" + getApp().globalData.openId,
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json"
       },
       success: function(res) {
         if (res) {
@@ -61,9 +60,9 @@ Page({
       },
       fail: function() {
         wx.showToast({
-          title: '未知错误',
+          title: "未知错误",
           image: "/assets/images/warning.png",
-          duration: 2000
+          duration: 1500
         });
       }
     });
@@ -84,8 +83,8 @@ Page({
     var that = this;
     var id = this.data.info.id;
     wx.request({
-      url: 'http://localhost:8080/user/' + id,
-      method: 'PUT',
+      url: "http://192.168.1.108:8080/user/" + id,
+      method: "PUT",
       data: {
         id: id,
         sex: 1
@@ -98,7 +97,7 @@ Page({
       },
       fail: function() {
         wx.showToast({
-          title: '未知错误',
+          title: "未知错误",
           image: "/assets/images/warning.png",
           duration: 2000
         });
@@ -110,8 +109,8 @@ Page({
     var that = this;
     var id = this.data.info.id;
     wx.request({
-      url: 'http://localhost:8080/user/' + id,
-      method: 'PUT',
+      url: "http://192.168.1.108:8080/user/" + id,
+      method: "PUT",
       data: {
         id: id,
         sex: 0
@@ -124,9 +123,9 @@ Page({
       },
       fail: function() {
         wx.showToast({
-          title: '未知错误',
+          title: "未知错误",
           image: "/assets/images/warning.png",
-          duration: 2000
+          duration: 1500
         });
       }
     });

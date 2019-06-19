@@ -9,10 +9,10 @@
       <text wx:if="{{index%4 == 0}}" class="cuIcon-square lg text-red"></text>
       <text wx:if="{{index%4 == 1}}" class="cuIcon-moreandroid lg text-blue"></text>
       <text wx:if="{{index%4 == 2}}" class="cuIcon-add lg text-yellow"></text>
-      <text wx:if="{{index%4 == 3}}" class="cuIcon-attentionfill lg text-green"></text>    
+      <text wx:if="{{index%4 == 3}}" class="cuIcon-attentionfill lg text-green"></text>
     </view>
     <view class="content">
-      <navigator url='../../pages/change-note/change-note?old_note={{item.text}}&content={{item.contentText}}&index={{index}}&id={{item.id}}'>
+      <navigator url="../../pages/change-note/change-note?old_note={{item.text}}&content={{item.contentText}}&index={{index}}&id={{item.id}}">
         <view class="text-mauve text-cut">{{item.contentText}}</view>
         <view class="text-gray text-sm flex">
           <text class="text-cut">{{item.text}}</text>

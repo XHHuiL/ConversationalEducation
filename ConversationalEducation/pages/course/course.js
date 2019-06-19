@@ -7,18 +7,18 @@ Page({
   onLoad: function(options) {
     var that = this;
     wx.request({
-      url: 'http://localhost:8080/course/selected/' + getApp().globalData.openId,
+      url: "http://192.168.1.108:8080/course/selected/" + getApp().globalData.openId,
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json"
       },
       success: function(res) {
         that.setData({
           courses: res.data.courses
         });
       },
-      fail: function(){
+      fail: function() {
         wx.showToast({
-          title: '未知错误',
+          title: "未知错误",
           image: "/assets/images/warning.png",
           duration: 2000
         });
@@ -26,21 +26,21 @@ Page({
     });
   },
 
-  onShow: function() { 
+  onShow: function() {
     var that = this;
     wx.request({
-      url: 'http://localhost:8080/course/selected/' + getApp().globalData.openId,
+      url: "http://192.168.1.108:8080/course/selected/" + getApp().globalData.openId,
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json"
       },
       success: function(res) {
         that.setData({
           courses: res.data.courses
         });
       },
-      fail: function(){
+      fail: function() {
         wx.showToast({
-          title: '未知错误',
+          title: "未知错误",
           image: "/assets/images/warning.png",
           duration: 2000
         });
@@ -51,7 +51,7 @@ Page({
   onClick: function(e) {
     var courseId = e.currentTarget.dataset.id;
     wx.navigateTo({
-      url: '../chapter/chapter?courseId=' + courseId,
+      url: "../chapter/chapter?courseId=" + courseId,
     });
   },
 
@@ -71,21 +71,21 @@ Page({
     var courseId = this.data.courseId;
     var that = this;
     wx.request({
-      url: 'http://localhost:8080/course/drop',
-      method: 'DELETE',
+      url: "http://192.168.1.108:8080/course/drop",
+      method: "DELETE",
       data: {
         userId: getApp().globalData.openId,
         courseId: courseId,
       },
       success: function() {
         wx.showToast({
-          title: '退课成功',
+          title: "退课成功",
           duration: 2000
         });
         wx.request({
-          url: 'http://localhost:8080/course/selected/' + getApp().globalData.openId,
+          url: "http://192.168.1.108:8080/course/selected/" + getApp().globalData.openId,
           headers: {
-            'Content-Type': 'application/json'
+            "Content-Type": "application/json"
           },
           success: function(res) {
             that.setData({
@@ -97,7 +97,7 @@ Page({
       },
       fail: function() {
         wx.showToast({
-          title: '未知错误',
+          title: "未知错误",
           image: "/assets/images/warning.png",
           duration: 2000
         });
