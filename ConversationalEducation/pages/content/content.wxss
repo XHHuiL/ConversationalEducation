@@ -47,8 +47,8 @@ scroll-view .message .triangle {
 
 scroll-view  .message text {
   background-color: #fff;
-  font-size: 24rpx;
-  line-height: 40rpx;
+  font-size: 30rpx;
+  line-height: 36rpx;
   padding: 20rpx;
   max-width: 500rpx;
   border-radius: 15rpx;
@@ -68,8 +68,8 @@ scroll-view  .message text {
 
 scroll-view  .content navigator {
   background-color: #fff;
-  font-size: 24rpx;
-  line-height: 40rpx;
+  font-size: 30rpx;
+  line-height: 36rpx;
   padding: 20rpx;
   max-width: 500rpx;
   border-radius: 15rpx;
@@ -79,8 +79,8 @@ scroll-view  .content navigator {
 
 scroll-view  .content .options {
   background-color: #fff;
-  font-size: 24rpx;
-  line-height: 40rpx;
+  font-size: 30rpx;
+  line-height: 36rpx;
   padding: 20rpx;
   max-width: 500rpx;
   border-radius: 15rpx;

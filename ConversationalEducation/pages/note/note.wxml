@@ -4,7 +4,7 @@
   </view>
 </view>
 <view class="cu-list menu-avatar">
-  <view class="cu-item" wx:for="{{notes}}" wx:key>
+  <view class="cu-item" wx:for="{{notes}}" wx:key bindtap="onClick" data-index="{{index}}">
     <view class="cu-avatar round lg" style="background-color:#fff;">
       <text wx:if="{{index%4 == 0}}" class="cuIcon-square lg text-red"></text>
       <text wx:if="{{index%4 == 1}}" class="cuIcon-moreandroid lg text-blue"></text>
@@ -12,12 +12,10 @@
       <text wx:if="{{index%4 == 3}}" class="cuIcon-attentionfill lg text-green"></text>
     </view>
     <view class="content">
-      <navigator url="../../pages/change-note/change-note?old_note={{item.text}}&content={{item.contentText}}&index={{index}}&id={{item.id}}">
         <view class="text-mauve text-cut">{{item.contentText}}</view>
         <view class="text-gray text-sm flex">
           <text class="text-cut">{{item.text}}</text>
         </view>
-      </navigator>
     </view>
   </view>
 </view>

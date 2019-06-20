@@ -44,9 +44,39 @@ Page({
               app.globalData.sessionKey = res.data.sessionKey;
               wx.setStorageSync("openId", app.globalData.openId);
               wx.setStorageSync("sessionKey", app.globalData.sessionKey);
+              var uuid = res.data.openId
+              wx.request({
+                url: "http://101.132.190.67:80/user/" + uuid,
+                method: "GET",
+                success: function (res) {
+                  var id = res.data.info.id;
+                  wx.request({
+                    url: "http://101.132.190.67:80/user/" + id,
+                    method: "PUT",
+                    data: {
+                      id: id,
+                      headSculpture: e.detail.userInfo.avatarUrl
+                    },
+                    fail: function () {
+                      wx.showToast({
+                        title: "未知错误",
+                        image: "/assets/images/warning.png",
+                        duration: 1500
+                      });
+                    }
+                  });
+                },
+                fail: function () {
+                  wx.showToast({
+                    title: "未知错误",
+                    image: "/assets/images/warning.png",
+                    duration: 1500
+                  });
+                }
+              });
             }
           },
-          fail: function() {
+          fail: function(res) {
             console.log("http request fail!");
           }
         });
@@ -56,11 +86,12 @@ Page({
     if (e.detail.userInfo) {
       app.globalData.userInfo = e.detail.userInfo;
       app.globalData.hasUserInfo = true;
+
       try {
         wx.setStorageSync("userInfo", app.globalData.userInfo);
         wx.setStorageSync("hasUserInfo", app.globalData.hasUserInfo);
         var timeStamp = Date.parse(new Date());
-        timeStamp = timeStamp / 1000 + 24 * 3600;
+        timeStamp = timeStamp / 1000 + 60;
         wx.setStorageSync("deadTime", timeStamp);
       } catch (e) {
         console.log("set key error!");

@@ -37,6 +37,24 @@ Page({
     });
   },
 
+  changeName: function() {
+    wx.navigateTo({
+      url: "../change-name/change-name?old_name=" + this.data.info.nickname + "&id=" + this.data.info.id,
+    });
+  },
+
+  changeEmail: function() {
+    wx.navigateTo({
+      url: "../change-email/change-email?old_email=" + this.data.info.email + "&id=" + this.data.info.id,
+    });
+  },
+
+  changeNumber: function() {
+    wx.navigateTo({
+      url: "../change-student-number/change-student-number?old_student_number=" + this.data.info.number + "&id=" + this.data.info.id,
+    });
+  },
+
   onShow: function() {
     var that = this;
     wx.request({

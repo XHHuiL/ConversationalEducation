@@ -26,6 +26,14 @@ Page({
     });
   },
 
+  onClick: function(e) {
+    var index = e.currentTarget.dataset.index;
+    var item = this.data.notes[index];
+    wx.navigateTo({
+      url: "../change-note/change-note?old_note=" + item.text + "&content=" + item.contentText + "&index=" + index + "&id=" + item.id
+    })
+  },
+
   onShow: function() {
     var that = this;
     wx.request({

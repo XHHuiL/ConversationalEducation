@@ -195,8 +195,16 @@ Page({
           this.data.index = this.data.index + 1;
           var s = "readContents[" + this.data.index + "]";
           var promptMessage = "恭喜你，回答正确";
-          if (select != this.data.correctOption)
-            promptMessage = "回答错误，正确答案是：" + (string)('A' + this.data.correctOption - 1);
+          if (select != this.data.correctOption) {
+            var c = "A";
+            if (this.data.correctOption == 2)
+              c = "B";
+            else if (this.data.correctOption == 3)
+              c = "C";
+            else if (this.data.correctOption == 4)
+              c = "D";
+            promptMessage = "回答错误，正确答案是：" + c;
+          }
           var prompt = {
             id: 0,
             text: promptMessage,

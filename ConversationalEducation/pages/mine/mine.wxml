@@ -9,11 +9,11 @@
 </view>
 
 <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
-  <view class="cu-item arrow">
-    <navigator class="content" url="../../pages/change-name/change-name?old_name={{info.nickname}}&id={{info.id}}" hover-class="none">
+  <view class="cu-item arrow" bindtap="changeName">
+    <button class="cu-btn content" open-type="feedback">
       <text class="cuIcon-friendfamous text-green"></text>
-      <text class="text-gray">{{info.nickname}}</text>
-    </navigator>
+      <text class="text-gray" wx:if="{{info.nickname!=null}}">{{info.nickname}}</text>
+    </button>
   </view>
   <view class="cu-item arrow" bindtap="showModal" data-target="RadioModal">
     <button class="cu-btn content" open-type="feedback">
@@ -21,17 +21,17 @@
       <text class="text-gray">{{sex}}</text>
     </button>
   </view>
-  <view class="cu-item arrow">
-    <navigator class="content" url="../../pages/change-email/change-email?old_email={{info.email}}&id={{info.id}}" hover-class="none">
+  <view class="cu-item arrow" bindtap="changeEmail">
+    <button class="cu-btn content" open-type="feedback">
       <text class="cuIcon-mail text-purple"></text>
-      <text class="text-gray">{{info.email}}</text>
-    </navigator>
+      <text class="text-gray" wx:if="{{info.email!=null}}">{{info.email}}</text>
+    </button>
   </view>
-  <view class="cu-item arrow">
-    <navigator class="content" url="../../pages/change-student-number/change-student-number?old_student_number={{info.number}}&id={{info.id}}" hover-class="none">
+  <view class="cu-item arrow" bindtap="changeNumber">
+    <button class="cu-btn content" open-type="feedback">
       <text class="cuIcon-qrcode text-yellow"></text>
-      <text class="text-gray">{{info.number}}</text>
-    </navigator>
+      <text class="text-gray" wx:if="{{info.number!=null}}">{{info.number}}</text>
+    </button>
   </view>
 </view>
 

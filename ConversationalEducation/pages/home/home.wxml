@@ -18,7 +18,7 @@
     <view class="content">
       <view class="text-pink">{{item.name}}</view>
       <view class="text-gray text-sm flex">
-        <text class="text-cut">{{item.description}}</text>
+        <text class="text-cut" wx:if="{{item.description != null}}">{{item.description}}</text>
       </view>
     </view>
     <view class="action">

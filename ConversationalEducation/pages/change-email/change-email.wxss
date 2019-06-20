@@ -1,8 +1,10 @@
 input {
-  height: 40rpx;
-  line-height: 40rpx;
-  font-size: 32rpx;
+  height: 60rpx;
+  line-height: 48rpx;
+  font-size: 48rpx;
   margin: 20rpx;
+  margin-top: 60rpx;
+  padding-bottom: 10rpx;
   border-bottom-width: 1rpx;
   border-bottom-color: #009900;
   border-bottom-style: solid;

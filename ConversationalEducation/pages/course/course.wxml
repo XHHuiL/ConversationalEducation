@@ -9,7 +9,7 @@
     <view class="content" bindtap="onClick" data-id="{{item.id}}">
       <view class="text-mauve">{{item.name}}</view>
       <view class="text-gray text-sm flex">
-        <text class="text-cut">{{item.description}}</text>
+        <text class="text-cut" wx:if="{{item.description != null}}">{{item.description}}</text>
       </view>
     </view>
     <text class="cuIcon-delete lg text-red" bindtap="showModal" data-id="{{item.id}}"></text>
