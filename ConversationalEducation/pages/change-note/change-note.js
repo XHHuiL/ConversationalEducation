@@ -24,7 +24,7 @@ Page({
     var noteId = this.data.id;
     var new_note = this.data.new_note;
     wx.request({
-      url: "http://101.132.190.67:80/note/" + noteId,
+      url: getApp().globalData.serverUrl + "/note/" + noteId,
       method: "PUT",
       data: {
         id: noteId,
@@ -61,7 +61,7 @@ Page({
     var that = this;
     var noteId = this.data.id;
     wx.request({
-      url: "http://101.132.190.67:80/note/" + noteId,
+      url: getApp().globalData.serverUrl + "/note/" + noteId,
       method: "DELETE",
       success: function() {
         that.setData({

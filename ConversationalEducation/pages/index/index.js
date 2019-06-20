@@ -33,7 +33,7 @@ Page({
       success: res => {
         var code = res.code;
         wx.request({
-          url: "http://101.132.190.67:80/user/login",
+          url: getApp().globalData.serverUrl + "/user/login",
           method: "POST",
           data: {
             code: code
@@ -46,12 +46,12 @@ Page({
               wx.setStorageSync("sessionKey", app.globalData.sessionKey);
               var uuid = res.data.openId
               wx.request({
-                url: "http://101.132.190.67:80/user/" + uuid,
+                url: getApp().globalData.serverUrl + "/user/" + uuid,
                 method: "GET",
                 success: function (res) {
                   var id = res.data.info.id;
                   wx.request({
-                    url: "http://101.132.190.67:80/user/" + id,
+                    url: getApp().globalData.serverUrl + "/user/" + id,
                     method: "PUT",
                     data: {
                       id: id,
@@ -91,7 +91,7 @@ Page({
         wx.setStorageSync("userInfo", app.globalData.userInfo);
         wx.setStorageSync("hasUserInfo", app.globalData.hasUserInfo);
         var timeStamp = Date.parse(new Date());
-        timeStamp = timeStamp / 1000 + 60;
+        timeStamp = timeStamp / 1000 + 10 * 60;
         wx.setStorageSync("deadTime", timeStamp);
       } catch (e) {
         console.log("set key error!");

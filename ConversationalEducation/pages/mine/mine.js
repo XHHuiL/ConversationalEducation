@@ -5,7 +5,7 @@ Page({
   onLoad: function(options) {
     var that = this;
     wx.request({
-      url: "http://101.132.190.67:80/user/" + getApp().globalData.openId,
+      url: getApp().globalData.serverUrl + "/user/" + getApp().globalData.openId,
       headers: {
         "Content-Type": "application/json"
       },
@@ -58,7 +58,7 @@ Page({
   onShow: function() {
     var that = this;
     wx.request({
-      url: "http://101.132.190.67:80/user/" + getApp().globalData.openId,
+      url: getApp().globalData.serverUrl + "/user/" + getApp().globalData.openId,
       headers: {
         "Content-Type": "application/json"
       },
@@ -101,7 +101,7 @@ Page({
     var that = this;
     var id = this.data.info.id;
     wx.request({
-      url: "http://101.132.190.67:80/user/" + id,
+      url: getApp().globalData.serverUrl + "/user/" + id,
       method: "PUT",
       data: {
         id: id,
@@ -127,7 +127,7 @@ Page({
     var that = this;
     var id = this.data.info.id;
     wx.request({
-      url: "http://101.132.190.67:80/user/" + id,
+      url: getApp().globalData.serverUrl + "/user/" + id,
       method: "PUT",
       data: {
         id: id,

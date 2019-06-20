@@ -22,7 +22,7 @@ Page({
     var id = this.data.id;
     var new_student_number = this.data.new_student_number;
     wx.request({
-      url: "http://101.132.190.67:80/user/" + id,
+      url: getApp().globalData.serverUrl + "/user/" + id,
       method: "PUT",
       data: {
         id: id,

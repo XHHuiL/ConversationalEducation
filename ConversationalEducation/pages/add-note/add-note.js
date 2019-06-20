@@ -19,7 +19,7 @@ Page({
 
   addNote: function() {
     wx.request({
-      url: "http://101.132.190.67:80/note",
+      url: getApp().globalData.serverUrl + "/note",
       method: "POST",
       data: {
         studentId: getApp().globalData.openId,

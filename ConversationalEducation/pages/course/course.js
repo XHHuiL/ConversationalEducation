@@ -7,7 +7,7 @@ Page({
   onLoad: function(options) {
     var that = this;
     wx.request({
-      url: "http://101.132.190.67:80/course/selected/" + getApp().globalData.openId,
+      url: getApp().globalData.serverUrl + "/course/selected/" + getApp().globalData.openId,
       headers: {
         "Content-Type": "application/json"
       },
@@ -29,7 +29,7 @@ Page({
   onShow: function() {
     var that = this;
     wx.request({
-      url: "http://101.132.190.67:80/course/selected/" + getApp().globalData.openId,
+      url: getApp().globalData.serverUrl + "/course/selected/" + getApp().globalData.openId,
       headers: {
         "Content-Type": "application/json"
       },
@@ -71,7 +71,7 @@ Page({
     var courseId = this.data.courseId;
     var that = this;
     wx.request({
-      url: "http://101.132.190.67:80/course/drop",
+      url: getApp().globalData.serverUrl + "/course/drop",
       method: "DELETE",
       data: {
         userId: getApp().globalData.openId,
@@ -83,7 +83,7 @@ Page({
           duration: 2000
         });
         wx.request({
-          url: "http://101.132.190.67:80/course/selected/" + getApp().globalData.openId,
+          url: getApp().globalData.serverUrl + "/course/selected/" + getApp().globalData.openId,
           headers: {
             "Content-Type": "application/json"
           },

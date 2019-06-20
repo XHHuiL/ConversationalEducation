@@ -17,15 +17,19 @@ Page({
     if (storeData) {
       that.setData(storeData);
       wx.request({
-        url: "http://101.132.190.67:80/contents/" + options.chapterId,
+        url: getApp().globalData.serverUrl + "/contents/" + options.chapterId,
         headers: {
           "Content-Type": "application/json"
         },
         success: function(res) {
           that.setData({
             teacherHeadSculpture: res.data.headSculpture,
+            teacherName: res.data.teacherName,
             contents: res.data.contents,
             length: res.data.contents.length,
+          });
+          wx.setNavigationBarTitle({
+            title: that.data.teacherName
           });
           if (that.data.index >= that.data.messageLength - 1 + that.data.length) {
             that.setData({
@@ -46,16 +50,20 @@ Page({
         chapterId: options.chapterId
       });
       wx.request({
-        url: "http://101.132.190.67:80/contents/" + options.chapterId,
+        url: getApp().globalData.serverUrl + "/contents/" + options.chapterId,
         headers: {
           "Content-Type": "application/json"
         },
         success: function(res) {
           that.setData({
             teacherHeadSculpture: res.data.headSculpture,
+            teacherName: res.data.teacherName,
             contents: res.data.contents,
             length: res.data.contents.length,
             image_url: getApp().globalData.userInfo.avatarUrl
+          });
+          wx.setNavigationBarTitle({
+            title: that.data.teacherName
           });
         },
         fail: function() {
@@ -113,7 +121,7 @@ Page({
         });
         var that = this;
         wx.request({
-          url: "http://101.132.190.67:80/options/" + content.id,
+          url: getApp().globalData.serverUrl + "/options/" + content.id,
           headers: {
             "Content-Type": "application/json"
           },
@@ -219,7 +227,7 @@ Page({
           });
           var that = this;
           wx.request({
-            url: "http://101.132.190.67:80/answer",
+            url: getApp().globalData.serverUrl + "/answer",
             method: "POST",
             data: {
               studentId: getApp().globalData.openId,

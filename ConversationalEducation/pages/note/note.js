@@ -5,7 +5,7 @@ Page({
   onLoad: function(options) {
     var that = this;
     wx.request({
-      url: "http://101.132.190.67:80/notes/" + getApp().globalData.openId,
+      url: getApp().globalData.serverUrl + "/notes/" + getApp().globalData.openId,
       headers: {
         "Content-Type": "application/json"
       },
@@ -37,7 +37,7 @@ Page({
   onShow: function() {
     var that = this;
     wx.request({
-      url: "http://101.132.190.67:80/notes/" + getApp().globalData.openId,
+      url: getApp().globalData.serverUrl + "/notes/" + getApp().globalData.openId,
       headers: {
         "Content-Type": "application/json"
       },

@@ -36,7 +36,7 @@ Page({
   onLoad: function(e) {
     var that = this;
     wx.request({
-      url: "http://101.132.190.67:80/course/all",
+      url: getApp().globalData.serverUrl + "/course/all",
       headers: {
         "Content-Type": "application/json"
       },
@@ -64,7 +64,7 @@ Page({
   takeCourse: function(e) {
     var that = this;
     wx.request({
-      url: "http://101.132.190.67:80/course/take",
+      url: getApp().globalData.serverUrl + "/course/take",
       method: "POST",
       data: {
         userId: getApp().globalData.openId,
